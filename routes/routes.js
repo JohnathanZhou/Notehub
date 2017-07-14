@@ -22,16 +22,15 @@ router.get('/home', function(req, res) {
 })
 
 
-router.get('/search',function(req,res){
+router.post('/',function(req,res){
   var course = req.body.subject;
   //find all the notes that pretain to the course from the dropdown bar
   Product.find({subject: course}, function(err,docs){
     res.render('search',{ //renders the search page with all the notes
       notes:docs //docs has all the info of each product
     })
-
-    })
   })
+})
 
 
 
