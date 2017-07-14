@@ -17,6 +17,12 @@ router.get('/login', function(req, res) {
 router.get('/home', function(req, res) {
   res.render('home')
 })
+router.get('/search',function(req,res){
+  var course = req.body.subject;
+  var search = req.body.search;
+})
+
+
 
 ///////////////////////////// END OF PUBLIC ROUTES /////////////////////////////
 

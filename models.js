@@ -27,8 +27,9 @@ var productSchema = mongoose.Schema({
   pdf: String,
   owner: String,
   price: String,
-  course: String,
-  school: String
+  course: Object,
+  school: String,
+  description: String
 });
 
 var schoolSchema = mongoose.Schema({
