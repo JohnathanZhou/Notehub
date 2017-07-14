@@ -1,4 +1,4 @@
-# Horizons Hackathon Template.
+# Notehub
 
 ## Steps 1: Get your project set-up
 You have two ways of working on your project: Local and Gomix.
