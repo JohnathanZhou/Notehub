@@ -47,7 +47,7 @@ router.use(function(req, res, next){
 // Only logged in users can see these routes
 
 router.get('/protected', function(req, res, next) {
-  res.render('protectedRoute', {
+  res.render('marketplace', {
     username: req.user.username,
   });
 });
