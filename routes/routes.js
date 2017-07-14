@@ -32,16 +32,6 @@ router.post('/',function(req,res){
   })
 })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 982afe7e74230b04f59ca62f31fa37c046a5aa4c
-
-
-
-
->>>>>>> 982afe7e74230b04f59ca62f31fa37c046a5aa4c
 
 ///////////////////////////// END OF PUBLIC ROUTES /////////////////////////////
 
