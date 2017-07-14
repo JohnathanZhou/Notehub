@@ -20,3 +20,5 @@ You have two ways of working on your project: Local and Gomix.
   `Remix this 🎤`
 1. Select `.env` on the left panel, add your `MONGODB_URI` and `SECRET`
 1. Click `Show` at the top to preview your app!
+
+Use ./node_modules/blueimp-file-upload-node/server.js to start file service
