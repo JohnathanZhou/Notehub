@@ -30,7 +30,7 @@ module.exports = function(passport) {
         res.status(500).redirect('/register');
         return;
       }
-      console.log(user);
+      console.log('saved to database',user);
       res.redirect('/login');
     });
   });
