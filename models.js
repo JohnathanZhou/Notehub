@@ -33,8 +33,7 @@ var productSchema = mongoose.Schema({
 
 var schoolSchema = mongoose.Schema({
   name: String,
-  courses: Array,
-  majors: Array
+  major: Array
 })
 
 var reviewSchema = mongoose.Schema({
