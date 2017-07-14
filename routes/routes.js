@@ -20,6 +20,8 @@ router.get('/login', function(req, res) {
 router.get('/home', function(req, res) {
   res.render('home')
 })
+
+
 router.get('/search',function(req,res){
   var course = req.body.subject;
   //find all the notes that pretain to the course from the dropdown bar
@@ -31,7 +33,6 @@ router.get('/search',function(req,res){
     })
   })
 
-})
 
 
 
