@@ -1,5 +1,5 @@
 Upload New Product
-<form style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px'
+<!-- <form style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px'
       action="/jz1"
       class="dropzone dz-clickable"
       name="userID"
@@ -7,6 +7,17 @@ Upload New Product
       <div class="dz-default dz-message">
         <span> Drop files here! </span>
       </div>
+</form> -->
+<form id="my-awesome-dropzone" class="dropzone dz-clickable">
+  <div class="dropzone-previews"></div> <!-- this is were the previews should be shown. -->
+
+  <!-- Now setup your input fields -->
+  <input type="email" name="username" />
+  <input type="password" name="password" placeholder="Class"/>
+  <input type="text" name="password" placeholder="Price"/>
+  <input type="password" name="password" placeholder="Class"/>
+
+  <button type="submit">Submit data and files!</button>
 </form>
 <!-- <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script> -->
 <script src="/scripts/dropzone.js"></script>
