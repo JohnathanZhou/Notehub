@@ -10,11 +10,19 @@ router.get('/', function(req, res, next) {
   res.render('Notehub');
 });
 
+router.get('/login', function(req, res) {
+  res.render('login')
+})
+
+router.get('/home', function(req, res) {
+  res.render('home')
+})
+
 ///////////////////////////// END OF PUBLIC ROUTES /////////////////////////////
 
 router.use(function(req, res, next){
   if (!req.user) {
-    res.redirect('/login');
+    res.redirect('/');
   } else {
     return next();
   }
