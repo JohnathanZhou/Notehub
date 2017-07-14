@@ -31,7 +31,7 @@ var app = express();
 
 // view engine setup
 var hbs = require('express-handlebars')({
-  // defaultLayout: 'main',
+  defaultLayout: 'main',
   extname: '.hbs'
 });
 app.engine('hbs', hbs);
