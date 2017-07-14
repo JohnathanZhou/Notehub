@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 var models = require('../models');
 var User = models.User;
+var Product = models.Product;
+var School = models.School;
+var Review = models.Review;
 
 //////////////////////////////// PUBLIC ROUTES ////////////////////////////////
 // Users who are not logged in can see these routes
@@ -20,6 +23,15 @@ router.get('/home', function(req, res) {
 router.get('/search',function(req,res){
   var course = req.body.subject;
   var search = req.body.search;
+  search = search.slice(' '); //changes the search query into an array of words
+  var sorted = [];
+  //find all the notes that pretain to the course from the dropdown bar
+  Product.find({subject: course}, function(err,docs){
+    docs.forEach(function(note){
+
+    })
+  })
+
 })
 
 

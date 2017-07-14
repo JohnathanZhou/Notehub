@@ -27,9 +27,10 @@ var productSchema = mongoose.Schema({
   pdf: String,
   owner: String,
   price: String,
-  course: Object,
+  course: String,
+  subject: String,
   school: String,
-  description: String
+  description: Array,
 });
 
 var schoolSchema = mongoose.Schema({
