@@ -16,14 +16,41 @@
     <input type="email" name="email" class="form-control">
   </div>
   <div class="form-group">
-    <label>Password</label>
-    <input type="password" name="password" class="form-control">
+    <label>Major</label>
+    <div class="select-style">
+      <select class="selectpicker">
+        <optgroup label="Majors">
+          <option id="Computer_Science"><span><i class="fa fa-shopping-cart"></i> Computer Science </span></option>
+          <option id="Economics"><i class="fa fa-beer"></i>Economics</a></option>
+          <option id="Math"><i class="fa fa-cutlery"></i>Math</a></option>
+          <option id="Bio_Engineering"><i class="fa fa-futbol-o"></i>Bio Engineering</a></option>
+          <option id="Management"><i class="fa fa-life-ring"></i>Management</a></option>
+        </optgroup>
+      </select>
+    </div>
   </div>
-  <div class="form-group">
-    <label>Verify Password</label>
-    <input type="password" name="passwordRepeat" class="form-control">
+  </div class="form-group">
+    <label>University</label>
+    <div class="select-style">
+      <select class="selectpicker">
+        <optgroup label="University">
+          <option id="NU"><span><i class="fa fa-shopping-cart"></i> Northwestern U </span></option>
+          <option id="HKU"><i class="fa fa-beer"></i>Hong Kong U</a></option>
+          <option id="UCB"><i class="fa fa-cutlery"></i>UC Berkeley</a></option>
+          <option id="UCSD"><i class="fa fa-futbol-o"></i>UC San Diego</a></option>
+        </optgroup>
+      </select>
+    </div>
   </div>
-  <div class="form-group">
-    <button class="btn btn-success">Register</button>
-  </div>
+<div class="form-group">
+  <label>Password</label>
+  <input type="password" name="password" class="form-control">
+</div>
+<div class="form-group">
+  <label>Verify Password</label>
+  <input type="password" name="passwordRepeat" class="form-control">
+</div>
+<div class="form-group">
+  <button class="btn btn-success">Register</button>
+</div>
 </form>

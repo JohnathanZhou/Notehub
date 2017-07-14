@@ -21,7 +21,6 @@ router.get('/home', function(req, res) {
   res.render('home')
 })
 
-
 router.post('/',function(req,res){
   var course = req.body.subject;
   //find all the notes that pretain to the course from the dropdown bar
@@ -30,6 +29,15 @@ router.post('/',function(req,res){
       notes:docs //docs has all the info of each product
     })
   })
+})
+
+router.get('/newProduct', function(req, res) {
+  res.render('newProduct')
+})
+
+router.post('/newProduct', function(req, res) {
+  console.log(req.files)
+  res.render('home')
 })
 
 
@@ -47,7 +55,7 @@ router.use(function(req, res, next){
 // Only logged in users can see these routes
 
 router.get('/protected', function(req, res, next) {
-  res.render('protectedRoute', {
+  res.render('marketplace', {
     username: req.user.username,
   });
 });
