@@ -9,7 +9,7 @@ mongoose.connect(connect);
 // Remember: schemas are like your blueprint, and models
 // are like your building!
 var userSchema = mongoose.Schema({
-  name: String,
+  username: String,
   password: String,
   email: String,
   major: String,
