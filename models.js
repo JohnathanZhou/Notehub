@@ -16,7 +16,7 @@ var userSchema = mongoose.Schema({
   school: {
     type: mongoose.Schema.ObjectId,
     ref: 'School'
-  }
+  },
   classes: String,
   sellerrating: Number,
   notes: Array
