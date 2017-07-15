@@ -55,9 +55,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
     $(document).ready(function(){
-      $('a#review_btn').click(function(){
+      $('#review_btn').click(function(){
         event.preventDefault();
-        console.log('yo')
+        console.log('We inside dat click handler')
         var html = `  <div class="row">
                         <form class="col s12" method="POST">
                           <div class="row">
