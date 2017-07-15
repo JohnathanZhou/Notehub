@@ -88,62 +88,63 @@
     <h1>welcome to Notehub<span></span></h1>
     <span>Work smarter, not harder, with the work done by your peers.</span>
 
-    <form method="post">
-      <div class="search_promo">
-        <div class="input-group">
-          <div class="search col-md-9" >
-            <input type="text" class="form-control" aria-label="..." placeholder="Search for any Note"></input>
-          </div>
-          <!-- <div class="input-group-btn btn_cat dropdown scrollable"> -->
-          <!-- <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Major
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#"> Biology</a>
-              <a class="dropdown-item" href="#"> Computer Science </a>
-              <a class="dropdown-item" href="#">Maths</a>
-            </div>
-          </div> -->
-          <div class="select-style">
-            <select class="selectpicker" aria-expanded="false">
-              <optgroup label="Majors">
-                <option id="Computer_Science"><span><i class="fa fa-shopping-cart"></i> Computer Science </span></option>
-                <option id="Economics"><i class="fa fa-beer"></i>Economics</a></option>
-                <option id="Math"><i class="fa fa-cutlery"></i>Math</a></option>
-                <option id="Bio_Engineering"><i class="fa fa-futbol-o"></i>Bio Engineering</a></option>
-                <option id="Management"><i class="fa fa-life-ring"></i>Management</a></option>
-              </optgroup>
-            </select>
-          </div>
-
-          <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          <span><i class="fa fa-shopping-cart"></i> Computer Science <span class="caret"></span></span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-right place_dd" role="menu">
-        <li><i class="fa fa-film"></i>Computer Science</li>
-        <li><i class="fa fa-beer"></i>Economics</a></li>
-        <li><i class="fa fa-cutlery"></i>Math</a></li>
-        <li><i class="fa fa-futbol-o"></i>Bio Engineering</a></li>
-        <li><i class="fa fa-life-ring"></i>Management</a></li>
-        <li><i class="fa fa-university"></i>Mechanical Engineering</a></li>
-        <li><i class="fa fa-envelope-o"></i>Electrical Engineering</a></li>
-        <li><i class="fa fa-eye"></i>Chemistry</a></li>
-        <li><i class="fa fa-eye"></i>Cognitive Science</a></li>
-        <li><i class="fa fa-eye"></i>History</a></li>
-      </ul> -->
-      <!-- </div> -->
-      <div class="input-group-btn btn_promo_search">
-        <button type="button" class="btn btn-success">Search</button>
-      </div>
-    </div>
+    <div class="search_promo">
+      <form method="post" class="input-group">
+        <div class="search col-md-9">
+          <input type="text" class="form-control" aria-label="..." placeholder="Search for any Note"></input>
+        </div>
+        <div class="select-style">
+          <select class="selectpicker" aria-expanded="false">
+            <optgroup label="Majors">
+              <option id="Computer_Science"><span><i class="fa fa-shopping-cart"></i> Computer Science </span></option>
+              <option id="Economics"><i class="fa fa-beer"></i>Economics</a></option>
+              <option id="Math"><i class="fa fa-cutlery"></i>Math</a></option>
+              <option id="Bio_Engineering"><i class="fa fa-futbol-o"></i>Bio Engineering</a></option>
+              <option id="Management"><i class="fa fa-life-ring"></i>Management</a></option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="input-group-btn btn_promo_search">
+          <button name="submit" value="Search" type="button" class="btn btn-success">Search</button>
+        </div>
+      </form>
+      <!-- <div class="input-group-btn btn_cat dropdown scrollable"> -->
+      <!-- <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Major
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#"> Biology</a>
+    <a class="dropdown-item" href="#"> Computer Science </a>
+    <a class="dropdown-item" href="#">Maths</a>
   </div>
-</form>
+</div> -->
+
+<!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+<span><i class="fa fa-shopping-cart"></i> Computer Science <span class="caret"></span></span>
+</button>
+<ul class="dropdown-menu dropdown-menu-right place_dd" role="menu">
+<li><i class="fa fa-film"></i>Computer Science</li>
+<li><i class="fa fa-beer"></i>Economics</a></li>
+<li><i class="fa fa-cutlery"></i>Math</a></li>
+<li><i class="fa fa-futbol-o"></i>Bio Engineering</a></li>
+<li><i class="fa fa-life-ring"></i>Management</a></li>
+<li><i class="fa fa-university"></i>Mechanical Engineering</a></li>
+<li><i class="fa fa-envelope-o"></i>Electrical Engineering</a></li>
+<li><i class="fa fa-eye"></i>Chemistry</a></li>
+<li><i class="fa fa-eye"></i>Cognitive Science</a></li>
+<li><i class="fa fa-eye"></i>History</a></li>
+</ul> -->
+<!-- </div> -->
+</div>
 </div>
 <div class="scroll_block">
 </div>
 </div>
 
+{{#if Searching}}
+<h4>Hi</h4>
+{{else}}
 <!--Features block-->
 <div class="fea_block container-fluid" style="background-color:skyblue">
   <div class="fixed_w">
@@ -371,7 +372,7 @@
     <div class="row">
       <div class="col-md-4 place_index_item">
         <div class="place_inn">
-            <img src="/Notehub_files/xp1.png.pagespeed.ic.P5CAFtjp-2.webp" alt="#" data-pagespeed-url-hash="1809707179" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          <img src="/Notehub_files/xp1.png.pagespeed.ic.P5CAFtjp-2.webp" alt="#" data-pagespeed-url-hash="1809707179" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
           <div class="pl_descr">
             <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Slider Revolution included</a>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
@@ -387,7 +388,7 @@
       </div>
       <div class="col-md-4 place_index_item" >
         <div class="place_inn">
-            <img src="http://www.wikihow.com/images/8/8b/Take-Notes-Step-14.jpg" alt="#" data-pagespeed-url-hash="1809707179" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          <img src="http://www.wikihow.com/images/8/8b/Take-Notes-Step-14.jpg" alt="#" data-pagespeed-url-hash="1809707179" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
           <div class="pl_descr">
             <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Slider Revolution included</a>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
@@ -403,7 +404,7 @@
       </div>
       <div class="col-md-4 place_index_item ">
         <div class="place_inn">
-            <img src="http://www.wikihow.com/images/8/8b/Take-Notes-Step-14.jpg" alt="#" data-pagespeed-url-hash="1809707179" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          <img src="http://www.wikihow.com/images/8/8b/Take-Notes-Step-14.jpg" alt="#" data-pagespeed-url-hash="1809707179" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
           <div class="pl_descr">
             <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Slider Revolution included</a>
             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
@@ -420,6 +421,7 @@
     </div>
   </div>
 </div>
+{{/if}}
 </div>
 
 <!--
