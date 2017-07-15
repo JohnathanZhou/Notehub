@@ -56,59 +56,36 @@ router.get('/product/:id', function(req, res) {
 })
 
 
-router.post('/newProduct', function(req, res, next) {
-  // console.log(req.body);
-  // console.log(req.files)
-  // res.render('home')
-  // var fstream;
-  // req.pipe(req.busboy);
-  // req.busboy.on('file', function (fieldname, file, filename) {
-  //     console.log("Uploading: " + filename);
-  //     fstream = fs.createWriteStream(__dirname + '/files/' + filename);
-  //     file.pipe(fstream);
-  //     fstream.on('close', function () {
-  //         res.redirect('home');
-  //     });
-  // });
-//   fs.readFile(req.files.displayImage.path, function (err, data) {
-//   // ...
-//   var newPath = __dirname + "/files/" + 'req.files.filename';
-//   fs.writeFile(newPath, data, function (err) {
-//     res.redirect("/home");
-//   });
-// });
-  console.log(req.file);
-  console.log(req.body);
-  res.send(200)
+
+router.post('/newProduct', function(req, res) {
+  console.log('file: ' +req.file);
+  var newProduct = new Product({
+    name: req.body.name,
+    pdf: req.file.path,
+    owner: req.user._id,
+    price: req.body.price,
+    course: req.body.course,
+    subject: req.body.subject,
+    school: req.user.school,
+    description: req.body.description
+  })
+  newProduct.save(function(err) {
+    if (err) {
+      console.log("product not saved");
+    }
+    else {
+      console.log('Product saved!');
+      Product.findOne({name: req.body.name, description: req.body.description}, function(err, product) {
+        if (err) {
+          console.log('error in finding saved product');
+        }
+        else {
+          res.redirect('/product/'+product._id)
+        }
+      })
+    }
+  })
 })
-// router.post('/newProduct', function(req, res) {
-//   var newProduct = new Product({
-//     name: req.body.name,
-//     pdf: 'http://www.nhptv.org/wild/images/moosenpsJacobWFrank.jpg',
-//     owner: req.user._id,
-//     price: req.body.price,
-//     course: req.body.course,
-//     subject: req.body.subject,
-//     school: req.user.school,
-//     description: req.body.description
-//   })
-//   newProduct.save(function(err) {
-//     if (err) {
-//       console.log("product not saved");
-//     }
-//     else {
-//       console.log('Product saved!');
-//       Product.findOne({name: req.body.name, description: req.body.description}, function(err, product) {
-//         if (err) {
-//           console.log('error in finding saved product');
-//         }
-//         else {
-//           res.redirect('/product/'+product._id)
-//         }
-//       })
-//     }
-//   })
-// })
 
 
 

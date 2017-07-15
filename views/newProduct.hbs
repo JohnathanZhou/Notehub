@@ -18,29 +18,22 @@
 
 
 Upload New Product
-<form action="/newProduct"
-      method='post'
-
-      name="userID"
-      enctype="multiform/form-data"
-      id="dropzonefile">
+<form action="/newProduct" method='post' enctype="multipart/form-data">
       <input type="text" name="name" placeholder="Name"/> <br>
-      <input type="text" name="school" placeholder="University"/> <br>
-      <input type="password" name="subject" placeholder="Subject"/> <br>
+      <input type="text" name="subject" placeholder="Subject"/> <br>
       <input type="text" name="course" placeholder="Course"/> <br>
       <input type="number" name="price" placeholder="Price"/> <br>
       <textarea name="description" placeholder="Description" ></textarea> <br>
-
       <input type="file" name="displayImage" />
       <!-- <div style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px' class="dz-default dz-message">
         <span> Drop files here! </span>
       </div> -->
-      <button type="submit">Submit data and files!</button>
+      <input type="submit"value="Submit data and files!" >
 </form>
-<script src="/scripts/dropzone.js"></script>
+<!-- <script src="/scripts/dropzone.js"></script> -->
 
 
-<form action='/newProduct' method='post' enctype='multipart/form-data'>
+<!-- <form action='/newProduct' method='post' enctype='multipart/form-data'>
   <input type="file" name="displayImage" />
   <input type='submit' value='submit'>
-</form>
+</form> -->

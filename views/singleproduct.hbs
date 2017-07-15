@@ -17,7 +17,11 @@
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
+  <script>
+    .text {
+      color: white;
+    }
+  </script>
 
 
 </head>
@@ -25,16 +29,17 @@
   <body class="container">
     <div class="infomation col-sm-8" style="text-align: center;">
       <div style="font-size: 200%">
-        <div style="display: inline-block; float: left;"> {{product.name}}</div>
-        <div style="display: inline-block; float: right;"> {{product.price}}</div>
+        <div class="text" style="display: inline-block; float: left;"> {{product.name}}</div>
+        <hr />
+        <div class="text" style="display: inline-block;"> ${{product.price}}.00</div>
       </div>
 
       <br /><br /><br />
 
       <div style="font-size: 150%; float: left;">
-        <p>Subject: {{product.subject}}</p>
-        <p>Course: {{product.course}}</p>
-        <p>Description: {{product.description}}</p>
+        <p class="text">Subject: {{product.subject}}</p>
+        <p class="text">Course: {{product.course}}</p>
+        <p class="text">Description: {{product.description}}</p>
       </div>
 
       <!-- <br /><br /><br /> -->
@@ -44,7 +49,7 @@
       </div>
       <br />
       <div class="form-group">
-        <a class="btn btn-warning col-sm-12" href="/newReview">Make a Review</a>
+        <a class="btn btn-danger col-sm-12" href="/newReview">Make a Review</a>
       </div>
       <br /><br />
       <div style="font-size: 150%; float: left;">
@@ -61,7 +66,7 @@
       {{/each}}
 
       <div class="form-group">
-        <a class="btn btn-primary" href="/marketplace" style="float: left;">All Products</a>
+        <a class="btn btn-default" href="/marketplace" style="float: left;">All Products</a>
       </div>
 
     </div>
