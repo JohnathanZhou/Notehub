@@ -79,7 +79,7 @@ router.post('/marketplace', function(req,res){
   var sort = {}
   if(req.body.sort = 'Rating'){
     sort = {
-      owner.sellerrating: 1
+      //owner.sellerrating: 1
     }
   }else if(req.body.sort = 'Price Ascending'){
     sort = {
@@ -97,7 +97,7 @@ router.post('/marketplace', function(req,res){
   Product.find(find)
   .populate('school')
   .populate('owner')
-  .sort(req.)
+  .sort(find)
 })
 
   ///////////////////////////// END OF PRIVATE ROUTES /////////////////////////////
