@@ -56,7 +56,6 @@ router.get('/product/:id', function(req, res) {
       console.log(doc);
       res.render('singleproduct',{
         product: doc,
-        reviews: doc.reviews
       })
       //res.json(doc)
     }
