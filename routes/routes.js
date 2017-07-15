@@ -64,7 +64,7 @@ router.post('/newProduct', function(req, res) {
   console.log(img);
   var newProduct = new Product({
     name: req.body.name,
-    pdf: req.file.path+'.'+img[1],
+    pdf: req.file.path,
     owner: req.user._id,
     price: req.body.price,
     course: req.body.course,
@@ -78,6 +78,11 @@ router.post('/newProduct', function(req, res) {
     }
     else {
       console.log('Product saved!');
+      fs.rename('./public/images/'+req.file.path, './public/images/'+req.file.path+'.'+img[1], function(err) {
+        if (err) {
+          console.log('Failed to update path to correct file type.');
+        }
+      })
       Product.findOne({name: req.body.name, description: req.body.description}, function(err, product) {
         if (err) {
           console.log('error in finding saved product');
