@@ -1,4 +1,4 @@
-Upload New Product
+<!-- Upload New Product
 <form action="/newProduct"
       method='post'
       class="dropzone dz-clickable"
@@ -9,6 +9,27 @@ Upload New Product
       <input type="password" name="subject" placeholder="Subject"/> <br>
       <input type="text" name="course" placeholder="Course"/> <br>
       <input type="number" name="price" placeholder="Price"/> <br>
+      <div style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px' class="dz-default dz-message">
+        <span> Drop files here! </span>
+      </div>
+      <button type="submit">Submit data and files!</button>
+</form>
+<script src="/scripts/dropzone.js"></script> -->
+
+
+Upload New Product
+<form action="/newProduct"
+      method='post'
+
+      name="userID"
+      enctype="multiform/form-data"
+      id="dropzonefile">
+      <input type="text" name="name" placeholder="Name"/> <br>
+      <input type="text" name="school" placeholder="University"/> <br>
+      <input type="password" name="subject" placeholder="Subject"/> <br>
+      <input type="text" name="course" placeholder="Course"/> <br>
+      <input type="number" name="price" placeholder="Price"/> <br>
+      <input type="file" name="displayImage" />
       <div style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px' class="dz-default dz-message">
         <span> Drop files here! </span>
       </div>
