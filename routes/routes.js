@@ -43,7 +43,6 @@ router.get('/newProduct', function(req, res) {
 })
 
 router.get('/product/:id', function(req, res) {
-  console.log(req.params.id);
   Product.findById(req.params.id)
   .exec(
     function(err,doc){
@@ -56,6 +55,10 @@ router.get('/product/:id', function(req, res) {
   )
 })
 
+router.post('/prodcut/:id',function(req,res){
+  var review = req.body.reviewtext;
+
+})
 
 
 router.post('/newProduct', function(req, res) {
