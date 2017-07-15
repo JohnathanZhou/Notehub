@@ -5,6 +5,7 @@ var User = models.User;
 var Product = models.Product;
 var School = models.School;
 var Review = models.Review;
+var busboy = require('connect-busboy');
 
 //////////////////////////////// PUBLIC ROUTES ////////////////////////////////
 // Users who are not logged in can see these routes
