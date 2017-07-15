@@ -7,6 +7,8 @@ var School = models.School;
 var Review = models.Review;
 var busboy = require('connect-busboy');
 var fs = require('fs')
+var multer = require('multer')
+var upload = multer({ dest: 'files/' })
 
 //////////////////////////////// PUBLIC ROUTES ////////////////////////////////
 // Users who are not logged in can see these routes
@@ -42,7 +44,7 @@ router.get('/newProduct', function(req, res) {
 })
 
 
-router.post('/newProduct', function(req, res) {
+router.post('/newProduct', upload.single('productImage'), function(req, res, next) {
   // console.log(req.body);
   // console.log(req.files)
   // res.render('home')
@@ -56,13 +58,16 @@ router.post('/newProduct', function(req, res) {
   //         res.redirect('home');
   //     });
   // });
-  fs.readFile(req.files.displayImage.path, function (err, data) {
-  // ...
-  var newPath = __dirname + "/files/" + 'req.files.filename';
-  fs.writeFile(newPath, data, function (err) {
-    res.redirect("/home");
-  });
-});
+//   fs.readFile(req.files.displayImage.path, function (err, data) {
+//   // ...
+//   var newPath = __dirname + "/files/" + 'req.files.filename';
+//   fs.writeFile(newPath, data, function (err) {
+//     res.redirect("/home");
+//   });
+// });
+  console.log(req.file);
+  res.send(200)
+
 })
 
 
