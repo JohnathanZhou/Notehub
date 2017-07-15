@@ -59,12 +59,12 @@ router.get('/product/:id', function(req, res) {
 
 
 router.post('/newProduct', function(req, res) {
-  console.log(req.file);
   var img = req.file.mimetype.split('image/')
-  console.log(img);
+  var path = req.file.path+'.'+img[1]
+  console.log(path)
   var newProduct = new Product({
     name: req.body.name,
-    pdf: req.file.path,
+    pdf: path,
     owner: req.user._id,
     price: req.body.price,
     course: req.body.course,

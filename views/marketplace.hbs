@@ -85,44 +85,55 @@
                   <div class="search col-md-6" >
                     <input type="text" class="form-control" aria-label="..." placeholder="Search for any Note"></input>
                   </div>
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Major
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#"> Biology</a>
-                      <a class="dropdown-item" href="#"> Computer Science </a>
-                      <a class="dropdown-item" href="#">Maths</a>
-                    </div>
-                  </div>
-                  <div class="dropdown" style="margin-left: 20px">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Price
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Descending</a>
-                      <a class="dropdown-item" href="#">Ascending</a>
-                    </div>
-                  </div>
-                  <div class="dropdown" style="margin-left: 20px">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      School
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">UC Berkeley</a>
-                      <a class="dropdown-item" href="#">UC San Diego</a>
-                      <a class="dropdown-item" href="#"> HKU </a>
-                      <a class="dropdown-item" href="#"> Northwestern University </a>
-                    </div>
-                  </div>
-                  <form method="POST" action="http://localhost:3000/marketplace">
-                    <button class="btn waves-effect waves-light" type="submit" method="POST" style="margin-left: 10%"  style="color: white"> Submit </button>
-                  </form>
+
+        <form method="POST">
+          <div class="form-group">
+            <label>Major</label>
+            <div class="select-style">
+              <select class="selectpicker" name="major_select">
+                <optgroup label="Majors">
+                  <option id="Computer_Science"><span><i class="fa fa-shopping-cart"></i> Computer Science </span></option>
+                  <option id="Economics"><i class="fa fa-beer"></i>Economics</a></option>
+                  <option id="Math"><i class="fa fa-cutlery"></i>Math</a></option>
+                  <option id="Bio_Engineering"><i class="fa fa-futbol-o"></i>Bio Engineering</a></option>
+                  <option id="Management"><i class="fa fa-life-ring"></i>Management</a></option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Price</label>
+            <div class="select-style">
+              <select class="selectpicker" name="price_select">
+                <optgroup label="Price">
+                  <option id="ascending"><i class="fa fa-beer"></i>Low to high</a></option>
+                  <option id="descending"><i class="fa fa-cutlery"></i>High to low</a></option>
+                </optgroup>
+              </select>
+            </div>
+          <div class="form-group">
+            <label>School</label>
+            <div class="select-style">
+              <select class="selectpicker" name="school_select">
+                <optgroup label="Schools">
+                  <option id="Computer_Science"><span><i class="fa fa-shopping-cart"></i> Select your school </span></option>
+                  <option id="HKU"><i class="fa fa-beer"></i>the University of Hong Kong</a></option>
+                  <option id="UCS"><i class="fa fa-cutlery"></i>UC Berkeley</a></option>
+                  <option id="UCSD"><i class="fa fa-futbol-o"></i> UC San Diego</a></option>
+                  <option id="NWU"><i class="fa fa-life-ring"></i> Northwestern University</a></option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          </div>
+                  <button class="btn waves-effect waves-light" type="submit" method="POST" style="margin-left: 10%"  style="color: white"> Submit </button>
+              </form>
+
                 </div>
               </div>
             </div>
 
-            <h1>Meet Realsite</h1>
+            <h1>Check out notes!</h1>
             <p>Real estate template build upon the <a href="http://preview.byaviators.com/template/realsite/#">material design</a> concepts incorporating all features of modern<br> agency like multiple property displays, administration, submission forms, etc.</p>
           </div>
 
