@@ -6,6 +6,7 @@ var Product = models.Product;
 var School = models.School;
 var Review = models.Review;
 var busboy = require('connect-busboy');
+var fs = require('fs')
 
 //////////////////////////////// PUBLIC ROUTES ////////////////////////////////
 // Users who are not logged in can see these routes
@@ -45,16 +46,23 @@ router.post('/newProduct', function(req, res) {
   // console.log(req.body);
   // console.log(req.files)
   // res.render('home')
-  var fstream;
-  req.pipe(req.busboy);
-  req.busboy.on('file', function (fieldname, file, filename) {
-      console.log("Uploading: " + filename);
-      fstream = fs.createWriteStream(__dirname + '/files/' + filename);
-      file.pipe(fstream);
-      fstream.on('close', function () {
-          res.redirect('home');
-      });
+  // var fstream;
+  // req.pipe(req.busboy);
+  // req.busboy.on('file', function (fieldname, file, filename) {
+  //     console.log("Uploading: " + filename);
+  //     fstream = fs.createWriteStream(__dirname + '/files/' + filename);
+  //     file.pipe(fstream);
+  //     fstream.on('close', function () {
+  //         res.redirect('home');
+  //     });
+  // });
+  fs.readFile(req.files.displayImage.path, function (err, data) {
+  // ...
+  var newPath = __dirname + "/files/" + 'req.files.filename';
+  fs.writeFile(newPath, data, function (err) {
+    res.redirect("/home");
   });
+});
 })
 
 
