@@ -9,9 +9,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/Userprofile/A.bootstrap.css.pagespeed.cf.laZJ-JbHjf.css">
-<!--Main styles-->
+
 <link rel="stylesheet" type="text/css" href="/Userprofile/A.main.css+adaptive.css+pushy.css+font-awesome.css+animate.css,Mcc.7Xi885fzpN.css.pagespeed.cf.D0GJ6jOiSK.css">
 
 <link rel="stylesheet" type="text/css" href="/Userprofile/A.settings.css.pagespeed.cf.6k-xcbLfXv.css" media="screen">
@@ -25,12 +25,11 @@
 </head>
 <body class="inner_page innerpage">
 
-
 <!-- Use any element to open the sidenav -->
-
 <div class="bg_parallax" id="inb" style="background-position: 11.88px -23.85px;">
+
       <!--navigation swipe-->
-  <div class="menu-btn">☰</div>
+  <!-- <div class="menu-btn">☰</div>
   <nav class="pushy pushy-left">
     <div class="profile">
       <div class="avatar"><span>5</span></div>
@@ -40,7 +39,7 @@
 
   </nav>
 
-  <!--add-->
+
   <div class="add_place none" id="pl">
     <div class="place_form">
       <i class="fa fa-times close_window" id="close"></i>
@@ -64,7 +63,6 @@
     </div>
   </div>
 
-  <!--autorization-->
   <div class="add_place none" id="autorized">
     <div class="place_form login_form">
       <i class="fa fa-times close_window" id="closeau"></i>
@@ -78,8 +76,8 @@
     </div>
   </div>
   <div class="site-overlay"></div>
-  <div id="container">
-    <!--header-->
+  <div id="container"> -->
+
     <div class="container-fluid header inner_head">
       <div class="fixed_w">
         <div class="row">
@@ -103,14 +101,20 @@
 
             <!--reviews-->
             <div class="container col s8 z-depth-4" style="height:500px;background-color:white;">
-              <h2>Add your note here!</h2>
+              <h2><b>Add your note here!</b></h2>
 
                 <form class="col s8" style="margin-left: 20px" action="/newProduct" method='post' enctype="multipart/form-data">
-                      <input type="text" name="name" placeholder="Name"/> <br>
-                      <input type="text" name="subject" placeholder="Subject"/> <br>
-                      <input type="text" name="course" placeholder="Course"/> <br>
-                      <input type="number" name="price" placeholder="Price"/> <br>
-                      <textarea name="description" placeholder="Description" ></textarea> <br>
+                      <input type="text" name="name" style="font-size: 110%" placeholder="Name"/> <br />
+                      <select class="selectpicker" name="subject"  style="display: unset;">
+                          <option value="Computer_Science">Computer Science</option>
+                          <option value="Economics">Economics</option>
+                          <option value="Math">Math</option>
+                          <option value="Bio_Engineering">Bio Engineering</option>
+                          <option value="Management">Management</option>
+                      </select> <br />
+                      <input type="text" name="course" style="font-size: 110%" placeholder="Course"/> <br>
+                      <input type="number" name="price" style="font-size: 110%" placeholder="Price"/> <br>
+                      <textarea name="description" style="font-size: 110%" placeholder="Description" ></textarea> <br>
                       <input type="file" name="displayImage" />
                       <!-- <div style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px' class="dz-default dz-message">
                         <span> Drop files here! </span>
