@@ -137,13 +137,14 @@
                         <a href="http://preview.byaviators.com/template/realsite/headers-static-image.html">
                             <span class="promo-image">
                                 <span class="promo-image-inner">
-                                    <img src="/marketplace_files/realsite-header-image.jpg" alt="">
+                                    <img src="{{this.school.url}}" alt="">
                                 </span><!-- /.promo-image-inner -->
                             </span><!-- /.promo-image -->
 
                             <div class="promo-content">
-                                <span class="promo-title">Fixed image</span>
-                                <span class="promo-subtitle">Header Version</span>
+                                <span class="promo-title">{{name}}</span>
+                                <span class="promo-subtitle">{{price}}</span>
+                                <span class="promo-subtitle">{{this.owner.username}}</span>
                             </div><!-- /.promo-content -->
                         </a>
                     </div><!-- /.promo -->
@@ -152,7 +153,6 @@
 
         </div><!-- /.promos -->
     </div><!-- /.block -->
-
     {{/each}}
             </div><!-- /.content -->
         </div><!-- /.container -->
