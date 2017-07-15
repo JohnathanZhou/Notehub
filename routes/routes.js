@@ -134,7 +134,8 @@ router.get('/marketplace', function(req, res) {
   .exec(
     function(err,doc){
       res.render('marketplace', {
-        product:doc
+        product:doc,
+        user: req.user
       })
     })
   });
@@ -157,7 +158,8 @@ router.get('/marketplace', function(req, res) {
             a.owner.sellerrating-b.owner.sellerrating
           })
           res.render('marketplace',{
-            product:doc
+            product:doc,
+            user: req.user
           })
         }
       )
@@ -173,7 +175,8 @@ router.get('/marketplace', function(req, res) {
       .exec(
         function(err,doc){
           res.render('marketplace',{
-            product:doc
+            product:doc,
+            user: req.user
           })
         }
       )
@@ -189,7 +192,8 @@ router.get('/marketplace', function(req, res) {
       .exec(
         function(err,doc){
           res.render('marketplace',{
-            product:doc
+            product:doc,
+            user: req.user
           })
         }
       )
