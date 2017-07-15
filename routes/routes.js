@@ -63,8 +63,10 @@ router.use(function(req, res, next){
 
 router.get('/marketplace', function(req, res, next) {
   var products = [];
-  Product.find({school: req.user.school},function(err,doc){
-    prodcuts = doc
+  Product.find({school: req.user.school, subject:req.user.major},function(err,doc){
+    res.render('marketplace', {
+      product:doc
+    })
   })
 
 });
