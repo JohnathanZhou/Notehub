@@ -56,6 +56,7 @@ router.get('/product/:id', function(req, res) {
       console.log(doc);
       res.render('singleproduct',{
         product: doc,
+        pkey: process.env.STRIPE_PKEY
       })
       //res.json(doc)
     }

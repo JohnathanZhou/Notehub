@@ -24,7 +24,7 @@
 </head>
 
   <body style="background-color: skyblue;">
-  
+
     <div class="container" style="text-align: center; margin-top:50px; margin-left: 20px; display: flex;">
       <div class="container" style="font-size: 200%;min-width: 600px" >
         <div class="text" style="display: inline-block; float: left;"> {{product.name}}</div>
@@ -55,16 +55,25 @@
         </div>
 
         <div class="form-group" style="display: inline-table">
-          <a id="review_btn" class="btn btn-danger col-sm-4" style="margin-right: 10px" >Make a Review</a>
-          <a class="btn btn-danger col-sm-4"> Buy this note</a>
+          <form action="/pay" method="POST">
+             <script
+               src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+               data-key={{pkey}}
+               data-amount="999"
+               data-name="Demo Site"
+               data-description="Widget"
+               data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+               data-locale="auto">
+             </script>
+           </form>
            <a class="btn btn-default" href="/marketplace" style="float: left; margin-top:20px">All Products</a>
         </div>
       </div>
 
-      <div style="font-size: 80%; margin-right: 5%; width:30%">
+      <div style="font-size: 80%; margin-right: 10%; width:25%">
        <div class="container contant">
         <div class="row cont">
-          <div class="basic vp" style="width: 60%; float: left;">
+          <div class="basic vp" style="width: 50%; float: left;">
             <div class="reviews">
               <h4>{{reviews.length}} Reviews:</h4>
                 {{#each product.reviews}}
