@@ -17,13 +17,13 @@ module.exports = function(passport) {
         error: "Passwords don't match."
       });
     }
-    
+
     var u = new models.User({
       username: req.body.username,
       password: req.body.password,
       email: req.body.email,
       major: req.body.major_select,
-      school: school
+      school: '59695fa2d1770b298c31c3b9'
     });
     u.save(function(err, user) {
       if (err) {
