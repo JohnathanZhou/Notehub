@@ -53,7 +53,9 @@
                 <li class="has-children ">
                     <a href="http://preview.byaviators.com/template/realsite/#"> My profile <i class="fa fa-caret-down"></i></a>
                 </li>
-
+                <li class="has-children ">
+                    <a href="http://preview.byaviators.com/template/realsite/#"> Add a note <i class="fa fa-caret-down"></i></a>
+                </li>
             </ul><!-- /.nav -->
         </nav>
     </div><!-- /.nav-main-inner -->
@@ -82,12 +84,12 @@
             <div class="row">    
         <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Category
+                    Major
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#"> Biology</a>
+                    <a class="dropdown-item" href="#"> Computer Science </a>
+                    <a class="dropdown-item" href="#">Maths</a>
                   </div>
                 </div>   
                 <div class="dropdown" style="margin-left: 20px">
@@ -95,42 +97,24 @@
                     Price
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Descending</a>
+                    <a class="dropdown-item" href="#">Ascending</a>
                   </div>
                 </div>   
                 <div class="dropdown" style="margin-left: 20px">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Date
+                    School
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">UC Berkeley</a>
+                    <a class="dropdown-item" href="#">UC San Diego</a>
+                    <a class="dropdown-item" href="#"> HKU </a>
+                    <a class="dropdown-item" href="#"> Northwestern University </a>
                   </div>
-                </div>
-                <div class="dropdown" style="margin-left: 20px">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Major
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>       
-                <div class="dropdown" style="margin-left: 20px">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    University
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div> 
-                        <input type="text" class="form-control" name="x" placeholder="Search Note..." style="margin-top: 20px">
+                </div>     
+                <form method="POST" action="/cart/add/{{product._id}}">
+                    <button class="btn waves-effect waves-light" type="submit" method="POST" style="margin-left: 10%"  style="color: white"> Submit </button>  
+                </form> 
                 </div>
             </div>
         </div>
@@ -180,7 +164,6 @@
                 <div class="footer-bottom-left">
                     © 2017 Realsite - Material Real Esteate Template. All rights reserved.
                 </div><!-- /.footer-bottom-left -->
-
                 <div class="footer-bottom-right">
                     Created by <a href="http://byaviators.com/">Aviators</a>
                 </div><!-- /.footer-bottom-right -->
