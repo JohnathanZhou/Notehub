@@ -1,39 +1,140 @@
-<!-- Upload New Product
-<form action="/newProduct"
-      method='post'
-      class="dropzone dz-clickable"
-      name="userID"
-      id="dropzonefile">
-      <input type="text" name="name" placeholder="Name"/> <br>
-      <input type="text" name="school" placeholder="University"/> <br>
-      <input type="password" name="subject" placeholder="Subject"/> <br>
-      <input type="text" name="course" placeholder="Course"/> <br>
-      <input type="number" name="price" placeholder="Price"/> <br>
-      <div style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px' class="dz-default dz-message">
-        <span> Drop files here! </span>
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Userprofile </title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/Userprofile/A.bootstrap.css.pagespeed.cf.laZJ-JbHjf.css">
+<!--Main styles-->
+<link rel="stylesheet" type="text/css" href="/Userprofile/A.main.css+adaptive.css+pushy.css+font-awesome.css+animate.css,Mcc.7Xi885fzpN.css.pagespeed.cf.D0GJ6jOiSK.css">
+
+<link rel="stylesheet" type="text/css" href="/Userprofile/A.settings.css.pagespeed.cf.6k-xcbLfXv.css" media="screen">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body class="inner_page innerpage">
+
+
+<!-- Use any element to open the sidenav -->
+
+<div class="bg_parallax" id="inb" style="background-position: 11.88px -23.85px;">
+      <!--navigation swipe-->
+  <div class="menu-btn">☰</div>
+  <nav class="pushy pushy-left">
+    <div class="profile">
+      <div class="avatar"><span>5</span></div>
+      <h3><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html">Ananew Matvey</a></h3>
+      <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="log_btn">Log in</a>
+    </div>
+
+  </nav>
+
+  <!--add-->
+  <div class="add_place none" id="pl">
+    <div class="place_form">
+      <i class="fa fa-times close_window" id="close"></i>
+      <h3>Add new place<span></span></h3>
+      <form>
+        <label>Place name:<input type="text"></label>
+        <label>latitude:<input type="text"></label>
+        <label>longitude:<input type="text"></label>
+        <label>Categori:
+          <select>
+            <option value="Cafe">Cafe</option>
+            <option value="Bar">Bar</option>
+            <option value="Cinema">Cinema</option>
+            <option value="Shop">Shop</option>
+            <option value="Club">Club</option>
+            <option value="Bank">Bank</option>
+          </select>
+        </label>
+        <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="green_btn_header" id="add">Add</a>
+      </form>
+    </div>
+  </div>
+
+  <!--autorization-->
+  <div class="add_place none" id="autorized">
+    <div class="place_form login_form">
+      <i class="fa fa-times close_window" id="closeau"></i>
+      <h3>Autorization<span></span></h3>
+      <form>
+        <label>Login:<input type="text"></label>
+        <label>Password:<input type="text"></label>
+        <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="btn btn-success">Log in</a>
+        <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="btn btn-primary"><i class="icon-facebook"></i>Log in with Facebook</a>
+      </form>
+    </div>
+  </div>
+  <div class="site-overlay"></div>
+  <div id="container">
+    <!--header-->
+    <div class="container-fluid header inner_head">
+      <div class="fixed_w">
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" class="search" placeholder="search"><a href="http://localhost:3000/newProduct" class="green_btn_header" id="ad">Add note!</a></div>
+          </div>
+        </div>
       </div>
-      <button type="submit">Submit data and files!</button>
-</form>
-<script src="/scripts/dropzone.js"></script> -->
+      <div class="container page_info" style="height:100px">
+
+      </div>
+      <div class="container contant">
+        <div class="row cont">
+
+          <!-- Left column-->
+
+          <!--content-->
 
 
-Upload New Product
-<form action="/newProduct" method='post' enctype="multipart/form-data">
-      <input type="text" name="name" placeholder="Name"/> <br>
-      <input type="text" name="subject" placeholder="Subject"/> <br>
-      <input type="text" name="course" placeholder="Course"/> <br>
-      <input type="number" name="price" placeholder="Price"/> <br>
-      <textarea name="description" placeholder="Description" ></textarea> <br>
-      <input type="file" name="displayImage" />
-      <!-- <div style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px' class="dz-default dz-message">
-        <span> Drop files here! </span>
-      </div> -->
-      <input type="submit"value="Submit data and files!" >
-</form>
-<!-- <script src="/scripts/dropzone.js"></script> -->
+            <!--visited places-->
+
+            <!--reviews-->
+            <div class="container col s8 z-depth-4" style="height:500px; background-color: white;"">
+              <h2>Add your note here!</h2>
+
+                <form class="col s8" style="margin-left: 20px" action="/newProduct" method='post' enctype="multipart/form-data">
+                      <input type="text" name="name" placeholder="Name"/> <br>
+                      <input type="text" name="subject" placeholder="Subject"/> <br>
+                      <input type="text" name="course" placeholder="Course"/> <br>
+                      <input type="number" name="price" placeholder="Price"/> <br>
+                      <textarea name="description" placeholder="Description" ></textarea> <br>
+                      <input type="file" name="displayImage" />
+                      <!-- <div style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px' class="dz-default dz-message">
+                        <span> Drop files here! </span>
+                      </div> -->
+                      <a class="waves-effect waves-light btn" type="submit" style="margin-top: 20px"> button </a>
+                </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      #################################
+      - SCRIPT FILES -
+      #################################
+    -->
+    <!--Google maps API linl-->
 
 
-<!-- <form action='/newProduct' method='post' enctype='multipart/form-data'>
-  <input type="file" name="displayImage" />
-  <input type='submit' value='submit'>
-</form> -->
+    <!--Parallax bg-->
+
+  </body></html>
+
+
+
+
