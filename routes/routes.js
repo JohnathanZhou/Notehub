@@ -47,8 +47,15 @@ router.get('/newProduct', function(req, res) {
   res.render('newProduct')
 })
 
-router.get('/product', function(req, res) {
-  res.render('singleproduct')
+router.get('/product/:productid', function(req, res) {
+  Product.findById(req.params.productid)
+  .exec(
+    function(err,doc){
+      res.render('singleproduct',{
+        product:doc
+      })
+    }
+  )
 })
 
 
