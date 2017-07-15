@@ -108,7 +108,9 @@ router.use(function(req, res, next){
 // Only logged in users can see these routes
 
 router.get('/marketplace', function(req, res) {
-  Product.find({school: req.user.school, subject:req.user.major})
+  console.log(req.user.school)
+  console.log(req.user.major)
+  Product.find({school: req.user.school,subject: req.user.major})
   .populate('school')
   .populate('owner')
   .exec(
