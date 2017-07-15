@@ -47,14 +47,14 @@ router.get('/newProduct', function(req, res) {
   res.render('newProduct')
 })
 
-router.get('/product', function(req, res) {
+router.get('/product/:id', function(req, res) {
   Product.findById(req.params.productid)
   .exec(
     function(err,doc){
-      // res.render('singleproduct',{
-      //   product:doc
-      // })
-      res.json(doc)
+      res.render('singleproduct',{
+        product:doc
+      })
+      //res.json(doc)
     }
   )
 })
