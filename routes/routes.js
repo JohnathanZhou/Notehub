@@ -58,9 +58,10 @@ router.get('/product/:id', function(req, res) {
 
 
 router.post('/newProduct', function(req, res) {
+  console.log('file: ' +req.file);
   var newProduct = new Product({
     name: req.body.name,
-    pdf: req.file,
+    pdf: req.file.path,
     owner: req.user._id,
     price: req.body.price,
     course: req.body.course,
