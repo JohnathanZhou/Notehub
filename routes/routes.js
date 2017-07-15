@@ -18,7 +18,7 @@ router.get('/login', function(req, res) {
 })
 
 router.get('/home', function(req, res) {
-  res.render('marketplace')
+  res.render('home')
 })
 
 router.post('/',function(req,res){
@@ -59,7 +59,7 @@ router.get('/marketplace', function(req, res, next) {
   res.render('marketplace', {
     product:products
   });
-  
+
 });
 
 ///////////////////////////// END OF PRIVATE ROUTES /////////////////////////////
