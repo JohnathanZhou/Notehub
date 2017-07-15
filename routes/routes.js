@@ -37,6 +37,7 @@ router.get('/newProduct', function(req, res) {
 
 router.post('/newProduct', function(req, res) {
   console.log(req.files)
+  console.log(req.body);
   res.render('home')
 })
 
