@@ -55,20 +55,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
     $(document).ready(function(){
-      $('#review_btn').click(function(){
+      $('#review_btn').click(function(event){
         event.preventDefault();
         console.log('We inside dat click handler')
-        var html = `  <div class="row">
-                        <form class="col s12" method="POST">
+        var html = `<div class="row">
+                        <form class="col s12" method="POST" style='background-color:white'>
                           <div class="row">
                             <div class="input-field col s12">
-                              <textarea id="textarea1" name="reviewtext" class="materialize-textarea" placeholder="Textarea"></textarea>
+                              <textarea id="textarea1" name="reviewtext" class="materialize-textarea" placeholder="Write your review"></textarea>
                             </div>
                           </div>
-                          <input class="waves-effect waves-light btn" value="submit" name="Send">
+                          <input type='submit' id='reviewSubmit' class="waves-effect waves-light btn" value="submit" name="Send">
                         </form>
                       </div>`;
         $('#reviewsession').append(html);
+      })
+      $('#reviewSubmit').click(function(){
+        $('#reviewsession').
       })
     })
 
