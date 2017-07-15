@@ -32,7 +32,7 @@ module.exports = function(passport) {
       password: req.body.password,
       email: req.body.email,
       major: req.body.major_select,
-      school: req.body.university_select
+      school: school
     });
     u.save(function(err, user) {
       if (err) {
