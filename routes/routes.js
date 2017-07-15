@@ -31,9 +31,14 @@ router.post('/',function(req,res){
   })
 })
 
+router.get('/profile', function(req, res) {
+  res.render('myprofile')
+})
+
 router.get('/newProduct', function(req, res) {
   res.render('newProduct')
 })
+
 
 router.post('/newProduct', function(req, res) {
   console.log(req.body);
