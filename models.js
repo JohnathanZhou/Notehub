@@ -37,7 +37,8 @@ var productSchema = mongoose.Schema({
     ref: 'School'
   },
   description: String,
-  reviews: Array
+  reviews: Array,
+  productrating: Number
 });
 
 var schoolSchema = mongoose.Schema({

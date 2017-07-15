@@ -55,13 +55,53 @@ router.get('/product/:id', function(req, res) {
   )
 })
 
-router.post('/prodcut/:id',function(req,res){
+router.post('/product/:id',function(req,res){
   var review = req.body.reviewtext;
   var id = req.params.id;
-  Review.findById(id)
+  var thereview = new Review({
+    owner: req.user._id,
+    content: review,
+    rating: 3
+  })
+  Product.findById(id)
   .exec(
     function(err,doc){
-      
+      var length = doc.reviews.length+1;
+      function getSum(total, num) {
+        return total.rating + num.rating;
+        }
+      var summedratings=doc.reviews.reduce(getSum)+thereview.rating;
+      var avg = summedratings/length;
+      var allreviews=[...doc.reviews,thereview];
+      Product.findByIdAndUpdate(id,{productrating:avg, reviews:allreviews})
+      .exec(
+        function(err,thisproduct){
+          Product.find({owner:thisproduct.owner})
+          .exec(
+            function(err,allproductsfromuser){
+              function getSum(total, num) {
+                return total.productrating + num.productrating;
+                }
+              var summedproductratings = allproductsfromuser.reduce(getSum)+avg;
+              var length = allproductsfromuser.length+1;
+              var avguserrating = summedproductratings/length;
+              User.findByIdAndUpdate(thisproduct.owner, {sellerrating:avguserrating})
+              .exec(
+                function(err,whatever){
+                  thereview.save(function(err){
+                    if(err){
+                    console.log('WHY THE FUCK WOULD YOU ERROR NOW?')
+                  }else{
+                    var redirecturl = '/product/'+id;
+                    res.redirect(redirecturl)
+                  }
+                  })
+                }
+              )
+            }
+          )
+        }
+      )
     })
   })
 
