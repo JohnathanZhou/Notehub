@@ -28,14 +28,14 @@ var productSchema = mongoose.Schema({
   owner:{
     type:  mongoose.Schema.ObjectId,
     ref: 'User'
-  }
+  },
   price: String,
   course: String,
   subject: String,
   school:{
     type: mongoose.Schema.ObjectId,
     ref: 'School'
-  }
+  },
   description: Array,
 });
 
