@@ -32,14 +32,17 @@ var productSchema = mongoose.Schema({
   price: String,
   course: String,
   subject: String,
-  school: String,
+  school:{
+    type: mongoose.Schema.ObjectId,
+    ref: 'School'
+  }
   description: Array,
-  url: String
 });
 
 var schoolSchema = mongoose.Schema({
   name: String,
-  major: Array
+  major: Array,
+  url: String
 })
 
 var reviewSchema = mongoose.Schema({
