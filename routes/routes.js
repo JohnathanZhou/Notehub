@@ -24,10 +24,6 @@ router.get('/login', function(req, res) {
 router.get('/home', function(req, res) {
   res.render('home')
 })
-router.get('/marketplace', function(req,res){
-  res.render('marketplace');
-})
-
 
 router.post('/',function(req,res){
   var course = req.body.subject;
