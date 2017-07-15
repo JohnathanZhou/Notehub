@@ -69,7 +69,7 @@ router.get('/marketplace', function(req, res) {
     function(err,doc){
       res.render('marketplace', {
         product:doc
-      }))
+      })
     })
   });
 router.post('/marketplace', function(req,res){

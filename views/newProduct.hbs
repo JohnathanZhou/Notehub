@@ -1,6 +1,5 @@
 Upload New Product
-<form style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px'
-      action="/newProduct"
+<form action="/newProduct"
       method='post'
       class="dropzone dz-clickable"
       name="userID"
@@ -10,7 +9,7 @@ Upload New Product
       <input type="text" name="password" placeholder="Price"/>
       <input type="password" name="password" placeholder="Class"/>
       <button type="submit">Submit data and files!</button>
-      <div class="dz-default dz-message">
+      <div style='border: 2px solid rgba(0, 0, 0, 0.3); height: 70px; width: 400px' class="dz-default dz-message">
         <span> Drop files here! </span>
       </div>
 </form>
