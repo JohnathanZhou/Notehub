@@ -82,12 +82,13 @@
             <div class="hero">
               <div class="container">
                 <div class="row">
-                  <div class="search col-md-6" >
-                    <input type="text" class="form-control" aria-label="..." placeholder="Search for any Note"></input>
-                  </div>
 
-        <form method="POST">
-          <div class="form-group">
+        <form method="POST" style="width: 120%">
+
+          <div class="search" style="width: 40%; float:left;" >
+            <input type="text" class="form-control" aria-label="..." placeholder="Search for any Note"></input>
+          </div>
+          <div clss+"form-group" style="width:15%; float: left;">
             <label>Major</label>
             <div class="select-style">
               <select class="selectpicker" name="major_select">
@@ -101,7 +102,7 @@
               </select>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group" style="width:11%; float: left;">
             <label>Price</label>
             <div class="select-style">
               <select class="selectpicker" name="price_select">
@@ -112,7 +113,8 @@
                 </optgroup>
               </select>
             </div>
-          <div class="form-group">
+          </div>
+          <div class="form-group" style="width:15%; float: left;">
             <label>School</label>
             <div class="select-style">
               <select class="selectpicker" name="school_select">
@@ -127,8 +129,8 @@
               </select>
             </div>
           </div>
+          <button class="btn waves-effect waves-light" style="float: left;" type="submit" method="POST"  style="color: white"> Submit </button>
           </div>
-                  <button class="btn waves-effect waves-light" type="submit" method="POST" style="margin-left: 10%"  style="color: white"> Submit </button>
               </form>
 
                 </div>
