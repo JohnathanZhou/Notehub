@@ -56,7 +56,7 @@ var reviewSchema = mongoose.Schema({
 
 // Step 2: Create all of your models here, as properties.
 var User = mongoose.model('User', userSchema);
-var Product = mongoose.model('Restaurant', productSchema);
+var Product = mongoose.model('Product', productSchema);
 var Review = mongoose.model('Review', reviewSchema);
 var School = mongoose.model('School',schoolSchema)
 // Step 3: Export your models object
