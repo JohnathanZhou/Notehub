@@ -62,9 +62,10 @@ router.use(function(req, res, next){
 // Only logged in users can see these routes
 
 router.get('/marketplace', function(req, res, next) {
-  res.render('marketplace', {
-    product:products
-  });
+  var products = [];
+  Product.find({school: req.user.school},function(err,doc){
+    prodcuts = doc
+  })
 
 });
 
