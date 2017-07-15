@@ -128,7 +128,7 @@ router.get('/marketplace', function(req, res) {
     })
   });
   router.post('/marketplace', function(req,res){
-    var school = req.body.university_select;
+    var school = req.body.school_select;
     if(school === 'Northwestern U'){
       school='59695fa2d1770b298c31c3bb'
     }else if(school === 'Hong Kong U'){
@@ -140,9 +140,8 @@ router.get('/marketplace', function(req, res) {
     }else{
       school='all'
     }
-    var find={
-      subject: req.body.major_select
-    };
+    var find ={};
+    find['subject']=req.body.major_select;
     if('all'!==school){
       find.school=school;
     }
@@ -151,7 +150,7 @@ router.get('/marketplace', function(req, res) {
       Product.find(find)
       .populate('school')
       .populate('owner')
-      .sort(find)
+      .sort(sort)
       .exec(
         function(err,doc){
           doc=doc.sort(function(a,b){
@@ -170,7 +169,6 @@ router.get('/marketplace', function(req, res) {
       Product.find(find)
       .populate('school')
       .populate('owner')
-      .sort(find)
       .sort(sort)
       .exec(
         function(err,doc){
@@ -187,7 +185,6 @@ router.get('/marketplace', function(req, res) {
       Product.find(find)
       .populate('school')
       .populate('owner')
-      .sort(find)
       .sort(sort)
       .exec(
         function(err,doc){
