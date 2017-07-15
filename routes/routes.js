@@ -5,7 +5,6 @@ var User = models.User;
 var Product = models.Product;
 var School = models.School;
 var Review = models.Review;
-var busboy = require('connect-busboy');
 var fs = require('fs')
 
 
@@ -78,7 +77,7 @@ router.post('/newProduct', function(req, res, next) {
 //     res.redirect("/home");
 //   });
 // });
-  console.log(req.files);
+  console.log(req.file);
   console.log(req.body);
   res.send(200)
 })
