@@ -42,7 +42,7 @@ app.set('view engine', 'hbs');
 app.use(logger('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(multer({dest: "./files"}).single('displayImage'))
+app.use(multer({dest: "./public/images"}).single('displayImage'))
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
