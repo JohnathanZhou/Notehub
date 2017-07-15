@@ -40,8 +40,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.use(logger('tiny'));
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(multer({dest: "./files"}).array('displayImage'))
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
