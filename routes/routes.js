@@ -112,6 +112,7 @@ router.get('/marketplace', function(req, res) {
   .populate('owner')
   .exec(
     function(err,doc){
+      console.log(doc);
       res.render('marketplace', {
         product:doc,
         user: req.user
