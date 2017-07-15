@@ -30,21 +30,8 @@
 
 </head>
 
-  <body class="container col s6">
-    <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
-  </div>
-    <div class="information col-sm-8" style="text-align: center;">
+  <body class="container col s6" style="background-color: skyblue;">
+    <div class="container col-sm-8" style="text-align: center; margin-top:50px; margin-left: 20px">
       <div style="float: left;">
         <img src="{{product.pdf}}" width="100%"></img>
       </div>
@@ -66,15 +53,72 @@
       <!-- <br /><br /><br /> -->
 
       <div>
-        <img src="{{product.pdf}}" width="100%"></img>
+        <img src="{{product.pdf}}" width="50%"></img>
       </div>
       <br />
       <div class="form-group">
         <a class="btn btn-danger col-sm-12" href="/newReview">Make a Review</a>
       </div>
+      <div class="form-group">
+        <a class="btn btn-default" href="/marketplace" style="float: left; margin-top:20px">All Products</a>
+      </div>
       <br /><br />
-      <div style="font-size: 150%; float: left;">
-        Reviews:
+      <div style="font-size: 80%; margin-right: 20px;">
+              <div class="container contant">
+        <div class="row cont">
+
+          <!-- Left column-->
+
+          <!--content-->
+          <div class="col-md-9 basic vp">
+
+            <!--visited places-->
+
+            <!--reviews-->
+            <div class="reviews">
+              <h4>3 Reviews:</h4>
+              <!--review-->
+              <div class="rev">
+                <div class"user"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html" class"user_avatars">
+                  <img src="http://ilead.engineering.utoronto.ca/files/2015/02/jmr500px.jpg" alt="" data-pagespeed-url-hash="2157941605" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" style="height:70px">
+                </a></div>
+                <div class="texts">
+                  <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Oki doki</a> <span>12.09.2008</span></div>
+                  <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! Kids will love it...</div>
+                </div>
+              </div>
+              <!--review end-->
+
+              <!--review-->
+              <div class="rev">
+                <div class"user"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html" class"user_avatars">
+                  <img src="https://www.mills.edu/uniquely-mills/students-faculty/student-profiles/images/student-profile-veronica-mills-college.jpg" style="height:60px; width:60px" alt="" data-pagespeed-url-hash="1744972516" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></div>
+                  <div class="texts">
+                    <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Old capitan pub</a> <span>12.09.2008</span></div>
+                    <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! </div>
+                  </div>
+                </div>
+                <!--review end-->
+
+
+                <!--review-->
+                <div class="rev">
+                  <div class"user"><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtz-J6qG-FoPBXYt51X5ZzPee1O7E_sgFbYy3a4T2leHQUtJnY" style="height" alt="" data-pagespeed-url-hash="1863441684" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtz-J6qG-FoPBXYt51X5ZzPee1O7E_sgFbYy3a4T2leHQUtJnY" style="height:70px; width:60px" alt="" data-pagespeed-url-hash="1744972516" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                  </div>
+                    <div class="texts">
+                      <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Royal burger</a> <span>12.09.2008</span></div>
+                      <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! Kids will love it...</div>
+                    </div>
+                  </div>
+                  <!--review end-->
+                </div>
+
+                <!--morebtn-->
+                <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="more_btn">Load more</a>
+              </div>
+            </div>
+          </div>
       </div>
 
       <br /><br />
@@ -85,11 +129,6 @@
       <p>{{content}}</p>
       <hr />
       {{/each}}
-
-      <div class="form-group">
-        <a class="btn btn-default" href="/marketplace" style="float: left;">All Products</a>
-      </div>
-
     </div>
   </body>
 
