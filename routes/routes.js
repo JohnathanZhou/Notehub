@@ -57,8 +57,14 @@ router.get('/product/:id', function(req, res) {
 
 router.post('/prodcut/:id',function(req,res){
   var review = req.body.reviewtext;
+  var id = req.params.id;
+  Review.findById(id)
+  .exec(
+    function(err,doc){
+      
+    })
+  })
 
-})
 
 
 router.post('/newProduct', function(req, res) {
