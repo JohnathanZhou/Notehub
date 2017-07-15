@@ -88,17 +88,18 @@
             <!--reviews-->
             <div class="reviews">
               <h4>3 Reviews:</h4>
-
+                {{#each reviews}}
                 <!--review-->
                 <div class="rev">
-                  <div class"user"><a href="/profile/{{this.owner}}" style="height" alt="" data-pagespeed-url-hash="1863441684" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
-                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtz-J6qG-FoPBXYt51X5ZzPee1O7E_sgFbYy3a4T2leHQUtJnY" style="height:70px; width:60px" alt="" data-pagespeed-url-hash="1744972516" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                  <div class"user"><a href="/profile/{{this.owner}}" style="height" alt=""></a>
+                     <img src="/images/review.jpg" style="height:70px; width:60px" alt="" data-pagespeed-url-hash="1744972516" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                   </div>
                     <div class="texts">
-                      <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Royal burger</a> <span>12.09.2008</span></div>
-                      <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! Kids will love it...</div>
+                      <div>Rating: {{this.rating}}</div>
+                      <div class="text_rev">{{this.content}}</div>
                     </div>
                   </div>
+                  {{/each}}
                   <!--review end-->
                 </div>
 
@@ -120,11 +121,5 @@
 
       <br /><br />
 
-      {{#each reviews}}
-      <p>{{this.owner}}</p>
-      <p>{{this.rating}}</p>
-      <p>{{this.content}}</p>
-      <hr />
-      {{/each}}
     </div>
   </body>
