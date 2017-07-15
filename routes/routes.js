@@ -32,7 +32,7 @@ router.post('/',function(req,res){
 })
 
 router.get('/profile', function(req, res) {
-  res.render('myprofile')
+  res.render('userprofile')
 })
 
 router.get('/newProduct', function(req, res) {
