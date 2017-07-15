@@ -47,6 +47,10 @@ router.get('/newProduct', function(req, res) {
   res.render('newProduct')
 })
 
+router.get('/product', function(req, res) {
+  res.render('singleproduct')
+})
+
 
 router.post('/newProduct', upload.single('productImage'), function(req, res, next) {
   // console.log(req.body);
