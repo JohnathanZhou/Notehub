@@ -38,7 +38,14 @@
         <div class="text" style="display: inline-block; float: left;"> {{product.name}}</div>
         <br />
         <hr />
-        <div class="text" style="display: inline-block;"> ${{product.price}}.00</div>
+        <div style="width: 100%">
+            <div style="width: 50%; float: left;">
+              <p>${{product.price}}.00</p>
+            </div>
+            <div style="width: 50%; float: right;">
+              <p>{{product.rating}}/5</p>
+            </div>
+        </div>
       </div>
 
       <br /><br /><br />
