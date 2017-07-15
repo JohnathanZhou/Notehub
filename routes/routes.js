@@ -78,7 +78,7 @@ router.post('/newProduct', function(req, res) {
     }
     else {
       console.log('Product saved!');
-      fs.rename('./public/images/'+req.file.path, './public/images/'+req.file.path+'.'+img[1], function(err) {
+      fs.rename(req.file.path, req.file.path+'.'+img[1], function(err) {
         if (err) {
           console.log('Failed to update path to correct file type.');
         }
