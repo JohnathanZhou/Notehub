@@ -51,7 +51,7 @@
         <nav>
             <ul id="nav-main" class="nav nav-pills">
                 <li class="has-children ">
-                    <a href="http://localhost:3000/"> My profile <i class="fa fa-caret-down"></i></a>
+                    <a href="http://localhost:3000/profile/{{user._id}}"> My profile <i class="fa fa-caret-down"></i></a>
                 </li>
                 <li class="has-children ">
                     <a href="http://preview.byaviators.com/template/realsite/#"> Add a note <i class="fa fa-caret-down"></i></a>
@@ -112,7 +112,7 @@
                     <a class="dropdown-item" href="#"> Northwestern University </a>
                   </div>
                 </div>     
-                <form method="POST" action="/cart/add/{{product._id}}">
+                <form method="POST" action="http://localhost:3000/marketplace">
                     <button class="btn waves-effect waves-light" type="submit" method="POST" style="margin-left: 10%"  style="color: white"> Submit </button>  
                 </form> 
                 </div>
