@@ -63,14 +63,18 @@ router.use(function(req, res, next){
 
 router.get('/marketplace', function(req, res, next) {
   var products = [];
-  Product.find({school: req.user.school, subject:req.user.major},function(err,doc){
-    res.render('marketplace', {
-      product:doc
+  Product.find({school: req.user.school, subject:req.user.major})
+  .populate('school')
+  .populate('owner')
+  .exec(
+    function(err,doc){
+      res.render('marketplace', {
+        product:doc
+      }))
     })
-  })
 
-});
+  });
 
-///////////////////////////// END OF PRIVATE ROUTES /////////////////////////////
+  ///////////////////////////// END OF PRIVATE ROUTES /////////////////////////////
 
-module.exports = router;
+  module.exports = router;
