@@ -61,6 +61,26 @@
       <div>
         <img src="{{product.pdf}}" width="50%"></img>
       </div>
+      <br />
+      <div  class="form-group">
+
+        <!-- <a id="review_btn" class="btn btn-danger col-sm-12" >Make a Review</a> -->
+        <div class="row">
+                        <form class="col s12" method="POST" action ="/product/{{product._id}}" style='background-color:white'>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <textarea id="textarea1" name="reviewtext" class="materialize-textarea" placeholder="Write your review"></textarea>
+                            </div>
+                          </div>
+                          <input type='submit' id='reviewSubmit' class="waves-effect waves-light btn" value="submit" name="Send">
+                        </form>
+                      </div>
+        <a class="btn btn-danger col-sm-12" style="margin-top:10px"> Buy this note</a>
+      </div>
+      <div id="reviewsession" class="form-group">
+        <a class="btn btn-default" href="/marketplace" style="float: left; margin-top:20px">All Products</a>
+      </div>
+      <br /><br />
       <div style="font-size: 80%; margin-right: 20px;">
               <div class="container contant">
         <div class="row cont">
@@ -75,33 +95,10 @@
             <!--reviews-->
             <div class="reviews">
               <h4>3 Reviews:</h4>
-              <!--review-->
-              <div class="rev">
-                <div class"user"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html" class"user_avatars">
-                  <img src="http://ilead.engineering.utoronto.ca/files/2015/02/jmr500px.jpg" alt="" data-pagespeed-url-hash="2157941605" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" style="height:70px">
-                </a></div>
-                <div class="texts">
-                  <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Oki doki</a> <span>12.09.2008</span></div>
-                  <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! Kids will love it...</div>
-                </div>
-              </div>
-              <!--review end-->
-
-              <!--review-->
-              <div class="rev">
-                <div class"user"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html" class"user_avatars">
-                  <img src="https://www.mills.edu/uniquely-mills/students-faculty/student-profiles/images/student-profile-veronica-mills-college.jpg" style="height:60px; width:60px" alt="" data-pagespeed-url-hash="1744972516" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></div>
-                  <div class="texts">
-                    <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Old capitan pub</a> <span>12.09.2008</span></div>
-                    <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! </div>
-                  </div>
-                </div>
-                <!--review end-->
-
 
                 <!--review-->
                 <div class="rev">
-                  <div class"user"><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtz-J6qG-FoPBXYt51X5ZzPee1O7E_sgFbYy3a4T2leHQUtJnY" style="height" alt="" data-pagespeed-url-hash="1863441684" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                  <div class"user"><a href="/profile/{{this.owner}}" style="height" alt="" data-pagespeed-url-hash="1863441684" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtz-J6qG-FoPBXYt51X5ZzPee1O7E_sgFbYy3a4T2leHQUtJnY" style="height:70px; width:60px" alt="" data-pagespeed-url-hash="1744972516" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                   </div>
                     <div class="texts">
@@ -131,9 +128,9 @@
       <br /><br />
 
       {{#each reviews}}
-      <p>{{user.displayName}}</p>
-      <p>{{stars}}</p>
-      <p>{{content}}</p>
+      <p>{{this.owner}}</p>
+      <p>{{this.rating}}</p>
+      <p>{{this.content}}</p>
       <hr />
       {{/each}}
     </div>

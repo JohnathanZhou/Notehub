@@ -52,7 +52,8 @@ router.get('/product/:id', function(req, res) {
     function(err,doc){
       console.log(doc);
       res.render('singleproduct',{
-        product:doc
+        product:doc,
+        reviews: doc.reviews
       })
       //res.json(doc)
     }
@@ -74,7 +75,12 @@ router.post('/product/:id',function(req,res){
       function getSum(total, num) {
         return total.rating + num.rating;
         }
+      if(doc.reviews.length !== 0 ){
       var summedratings=doc.reviews.reduce(getSum)+thereview.rating;
+    }else{
+      var summedratings = thereview.rating;
+    }
+
       var avg = summedratings/length;
       var allreviews=[...doc.reviews,thereview];
       Product.findByIdAndUpdate(id,{productrating:avg, reviews:allreviews})
@@ -86,7 +92,12 @@ router.post('/product/:id',function(req,res){
               function getSum(total, num) {
                 return total.productrating + num.productrating;
                 }
-              var summedproductratings = allproductsfromuser.reduce(getSum)+avg;
+              if(allproductsfromuser.length!==0){
+                var summedproductratings = allproductsfromuser.reduce(getSum)+avg;
+              }else{
+                var summedproductratings = avg;
+              }
+
               var length = allproductsfromuser.length+1;
               var avguserrating = summedproductratings/length;
               User.findByIdAndUpdate(thisproduct.owner, {sellerrating:avguserrating})
