@@ -104,33 +104,64 @@ router.get('/marketplace', function(req, res) {
       })
     })
   });
-router.post('/marketplace', function(req,res){
-  var find={
-    subject: req.body.subject
-  };
-  var sort = {}
-  if(req.body.sort = 'Rating'){
-    sort = {
-      //owner.sellerrating: 1
+  router.post('/marketplace', function(req,res){
+    var find={
+      subject: req.body.subject
+    };
+    if('all'!==req.body.school){
+      find.school=req.body.school;
     }
-  }else if(req.body.sort = 'Price Ascending'){
-    sort = {
-      price: -1
+    var sort = {}
+    if(req.body.sort = 'Rating'){
+      Product.find(find)
+      .populate('school')
+      .populate('owner')
+      .sort(find)
+      .exec(
+        function(err,doc){
+          doc=doc.sort(function(a,b){
+            a.owner.sellerrating-b.owner.sellerrating
+          })
+          res.render('marketplace',{
+            product:doc
+          })
+        }
+      )
+    }else if(req.body.sort = 'Price Ascending'){
+      sort = {
+        price: -1
+      }
+      Product.find(find)
+      .populate('school')
+      .populate('owner')
+      .sort(find)
+      .sort(sort)
+      .exec(
+        function(err,doc){
+          res.render('marketplace',{
+            product:doc
+          })
+        }
+      )
+    }else{
+      sort = {
+        price: 1
+      }
+      Product.find(find)
+      .populate('school')
+      .populate('owner')
+      .sort(find)
+      .sort(sort)
+      .exec(
+        function(err,doc){
+          res.render('marketplace',{
+            product:doc
+          })
+        }
+      )
     }
-  }else{
-    sort = {
-      price: 1
-    }
-  }
+  })
 
-  if('all'!==req.body.school){
-    find.school=req.body.school;
-  }
-  Product.find(find)
-  .populate('school')
-  .populate('owner')
-  .sort(find)
-})
 
   ///////////////////////////// END OF PRIVATE ROUTES /////////////////////////////
 
