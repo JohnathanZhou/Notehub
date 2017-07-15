@@ -47,12 +47,15 @@ router.get('/newProduct', function(req, res) {
 })
 
 router.get('/product/:id', function(req, res) {
-  Product.findById(req.params.id)
+  var id = req.params.id;
+  //   5969f6898b287a674362d488
+  console.log(id);
+  Product.findById(id)
   .exec(
     function(err,doc){
       console.log(doc);
       res.render('singleproduct',{
-        product:doc,
+        product: doc,
         reviews: doc.reviews
       })
       //res.json(doc)
