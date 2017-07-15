@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{product.name}}</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="/Userprofile/A.bootstrap.css.pagespeed.cf.laZJ-JbHjf.css">
   <!--Main styles-->
@@ -25,9 +29,22 @@
 
 
 </head>
-<body>
-  <body class="container">
-    <div class="infomation col-sm-8" style="text-align: center;">
+
+  <body class="container col s6">
+    <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/office.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">This is a link</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
+    <div class="information col-sm-8" style="text-align: center;">
       <div style="float: left;">
         <img src="{{product.pdf}}" width="100%"></img>
       </div>
@@ -75,4 +92,4 @@
 
     </div>
   </body>
-</body>
+
