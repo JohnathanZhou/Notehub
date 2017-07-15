@@ -39,7 +39,7 @@ router.post('/',function(req,res){
   })
 })
 
-router.get('/profile', function(req, res) {
+router.get('/profile/:userid', function(req, res) {
   res.render('userprofile')
 })
 
