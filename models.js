@@ -25,12 +25,16 @@ var userSchema = mongoose.Schema({
 var productSchema = mongoose.Schema({
   name: String,
   pdf: String,
-  owner: String,
+  owner:{
+    type:  mongoose.Schema.ObjectId,
+    ref: 'User'
+  }
   price: String,
   course: String,
   subject: String,
   school: String,
   description: Array,
+  url: String
 });
 
 var schoolSchema = mongoose.Schema({
