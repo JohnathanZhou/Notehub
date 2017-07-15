@@ -128,14 +128,26 @@ router.get('/marketplace', function(req, res) {
     })
   });
   router.post('/marketplace', function(req,res){
+    var school = req.body.university_select;
+    if(school === 'Northwestern U'){
+      school='59695fa2d1770b298c31c3bb'
+    }else if(school === 'Hong Kong U'){
+      school='59695fa2d1770b298c31c3bc'
+    }else if(school === 'UC Berkeley'){
+      school='59695fa2d1770b298c31c3ba'
+    }else if(school === 'UC San Diego'){
+      school='59695fa2d1770b298c31c3b9'
+    }else{
+      school='all'
+    }
     var find={
-      subject: req.body.subject
+      subject: req.body.major_select
     };
-    if('all'!==req.body.school){
-      find.school=req.body.school;
+    if('all'!==school){
+      find.school=school;
     }
     var sort = {}
-    if(req.body.sort = 'Rating'){
+    if(req.body.price_select = 'Rating'){
       Product.find(find)
       .populate('school')
       .populate('owner')
@@ -151,7 +163,7 @@ router.get('/marketplace', function(req, res) {
           })
         }
       )
-    }else if(req.body.sort = 'Price Ascending'){
+    }else if(req.body.price_select = 'Low to high'){
       sort = {
         price: -1
       }
