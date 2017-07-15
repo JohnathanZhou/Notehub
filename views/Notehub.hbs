@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Notehub </title>
-<<<<<<< HEAD
+  <<<<<<< HEAD
 
 
-=======
-<script src="https://use.fontawesome.com/34ea6cf9bf.js"></script>
->>>>>>> ba6fc9afa8b27fb9465e6ebde672d54b2437d4be
+  =======
+  <script src="https://use.fontawesome.com/34ea6cf9bf.js"></script>
+  >>>>>>> ba6fc9afa8b27fb9465e6ebde672d54b2437d4be
   <!-- Bootstrap -->
 
   <link rel="stylesheet" type="text/css" href="/Notehub_files/A.bootstrap.css.pagespeed.cf.laZJ-JbHjf.css">
@@ -93,7 +93,7 @@
   </div>
   <div class="start_descrition">
     <h1>welcome to Notehub<span></span></h1>
-    <span> <strong>Study with affordable, top quality notes from top students </strong></span>
+    <span>Work smarter, not harder, with the work done by your peers.</span>
 
     <div class="search_promo">
       <form method="post" class="input-group">
@@ -149,54 +149,65 @@
 
 {{#if Searching}}
 <div class="fea_block container-fluid" style="background-color:skyblue">
-    {{#each notes}}
-      <div class="s-item-container" style="display: block;">
-        <div class="a-fixed-left-grid" style="padding-left:218px">
-          <div class="col-sm-8" style="border-style: solid; border-width: 3px; margin: 20px; border-radius: 10px; border-color: #32CD32;">
-            <div class="a-fixed-left-grid-col a-col-left" style="width:218px; margin-left:218px; _margin-left: -109px; float:left">
-              <div area-hidden="true" class="a-column a-span12 a text-center">
-                <a src="{{this.pdf}}" />
+  {{#each notes}}
+  <div class="s-item-container" style="display: block;">
+    <div class="a-fixed-left-grid" style="padding-left:218px">
+      <div class="col-sm-8" style="border-style: solid; border-width: 1px; margin: 10px; border-radius: 10px; border-color: #32CD32;">
+        <div class="a-fixed-left-grid-col a-col-left" style="width:200px; padding: 3px; float:left">
+          <img style="width: 100%" src="{{this.pdf}}" />
+        </div>
+        <div class="a-fixed-left-grid-col a-col-right" style="float: right; padding: 1px; width: 600px;">
+          <div style="float: left; display: block; width: 600px;">
+            <a href="/product/{{this.id}}" title="{{this.name}}"><h2>{{this.name}} <a style="font-size: 60%">in {{this.subject}}</a></h2></a>
+            <div style="width: 300px; float: left;">
+              <p>by {{this.owner}}</p>
+              <p>at in {{this.school}}</p>
+                <hr />
+              </div>
+              <div style="width: 300px; float: right;">
+                <p>${{this.price}}.00</p>
+                <p>{{this.rating}}/5</p>
+                <hr />
               </div>
             </div>
-            <div class="a-fixed-left-grid-col a-col-right" style="padding-left: 2%; *width:97.6%; float:right;">
-              <a href="/product/{{this.id}}" title="{{this.name}}">
-                <h2>{{this.name}}</h2>
-              </a>
-            </div>
+
+            <p style="display:block">{{this.description}}</p>
+
           </div>
         </div>
       </div>
+    </div>
     {{/each}}
-</div>
-{{else}}
-<!--Features block-->
-<div class="fea_block container-fluid" style="background-color:skyblue">
-  <div class="fixed_w">
-    <h2> Why Notehub? </h2>
-    <div class="row">
-      <div class="col-md-4 fea_item" >
-      <i class="fa fa-shopping-cart fa-5x" aria-hidden="true" style="margin-left: 100px"></i>
-        <h3>Learn from the best:</h3>
-        <span>Study from notes taken by top students, successful graduates, and drive your own success.</span>
-      </div>
-      <div class="col-md-4 fea_item">
-        <i class="fa fa-usd fa-5x" style="margin-left: 100px"></i>
-        <h3>Quality control:</h3>
-        <span>With our built-in previews and user reviews, never worry about the quality of notes your purchase</span>
-      </div>
-      <div class="col-md-4 fea_item">
-      <i class="fa fa-university fa-5x" style="margin-left: 100px"></i>
-        <h3>Run your own business:</h3>
-        <span>With our sales and marketing tools/guides, use Notehub as a platform to build your own business and brand</span>
+  </div>
+  {{else}}
+  <!--Features block-->
+  <div class="fea_block container-fluid" style="background-color:skyblue">
+    <div class="fixed_w">
+      <h2> What's special about Notehub </h2>
+      <div class="row">
+        <div class="col-md-4 fea_item" >
+          <i class="fa fa-shopping-cart fa-5x" aria-hidden="true" style="margin-left: 100px"></i>
+          <h3>Buy Class Notes From Trusted Peers</h3>
+          <span>With user feedback, you get an idea if the notes you're buying are worth it or not!</span>
+        </div>
+        <div class="col-md-4 fea_item">
+          <i class="fa fa-usd fa-5x" style="margin-left: 100px"></i>
+          <h3>Sell Your Class Notes</h3>
+          <span>Done with a class? Why not help another student out and make some money doing it!</span>
+        </div>
+        <div class="col-md-4 fea_item">
+          <i class="fa fa-university fa-5x" style="margin-left: 100px"></i>
+          <h3>Don't Trust Your Classmates?</h3>
+          <span>Search our database for classes from other universities and find exactly what you need when you need it.</span>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!--
-#################################
-- Slider revolution -
-#################################
+  <!--
+  #################################
+  - Slider revolution -
+  #################################
 -->
 
 
@@ -210,7 +221,7 @@
       <div class="col-md-3 user_cover">
         <div class="user_item">
           <div class="user_item_cont">
-        <img src="http://www.venmond.com/demo/vendroid/img/avatar/big.jpg" alt="#" data-pagespeed-url-hash="272472911" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            <img src="http://www.venmond.com/demo/vendroid/img/avatar/big.jpg" alt="#" data-pagespeed-url-hash="272472911" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
             <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html" class="names">Mattew An</a>
             <div class="bottom_link">
               <ul>
@@ -228,7 +239,7 @@
       <div class="col-md-3 user_cover">
         <div class="user_item">
           <div class="user_item_cont">
-        <img src="http://samorzad.up.krakow.pl/wp-content/uploads/2016/01/tutor-5.jpg" alt="#" data-pagespeed-url-hash="272472911" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            <img src="http://samorzad.up.krakow.pl/wp-content/uploads/2016/01/tutor-5.jpg" alt="#" data-pagespeed-url-hash="272472911" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
             <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html" class="names">John Doe</a>
             <div class="bottom_link">
               <ul>
@@ -264,7 +275,7 @@
       <div class="col-md-3 user_cover">
         <div class="user_item">
           <div class="user_item_cont">
-           <img src="http://profileplugin.com/wp-content/uploads/upme/cropped-1384318720_Eliza-Dushku-5-800x960.jpg" alt="#" data-pagespeed-url-hash="272472911" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            <img src="http://profileplugin.com/wp-content/uploads/upme/cropped-1384318720_Eliza-Dushku-5-800x960.jpg" alt="#" data-pagespeed-url-hash="272472911" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
             <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html" class="names">Dmitry Kozlovsky</a>
             <div class="bottom_link">
               <ul>
