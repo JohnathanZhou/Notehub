@@ -17,13 +17,22 @@ module.exports = function(passport) {
         error: "Passwords don't match."
       });
     }
-
+    var school = req.body.university_select;
+    if(school === 'Northwestern U'){
+      school='59695fa2d1770b298c31c3bb'
+    }else if(school === 'Hong Kong U'){
+      school='59695fa2d1770b298c31c3bc'
+    }else if(school === 'UC Berkeley'){
+      school='59695fa2d1770b298c31c3ba'
+    }else{
+      school='59695fa2d1770b298c31c3b9'
+    }
     var u = new models.User({
       username: req.body.username,
       password: req.body.password,
       email: req.body.email,
       major: req.body.major_select,
-      school: '59695fa2d1770b298c31c3b9'
+      school: req.body.university_select
     });
     u.save(function(err, user) {
       if (err) {
