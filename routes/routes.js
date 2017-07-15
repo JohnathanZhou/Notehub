@@ -18,7 +18,7 @@ router.get('/login', function(req, res) {
 })
 
 router.get('/home', function(req, res) {
-  res.render('home')
+  res.render('marketplace')
 })
 
 router.post('/',function(req,res){
