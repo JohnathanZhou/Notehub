@@ -63,7 +63,7 @@ router.post('/newProduct', function(req, res) {
   console.log(img);
   var newProduct = new Product({
     name: req.body.name,
-    pdf: req.file.path+'.'+img,
+    pdf: req.file.path+'.'+img[1],
     owner: req.user._id,
     price: req.body.price,
     course: req.body.course,
