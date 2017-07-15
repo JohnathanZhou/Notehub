@@ -53,7 +53,26 @@
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('a#review_btn').click(function(){
+        event.preventDefault();
+        console.log('yo')
+        var html = `  <div class="row">
+                        <form class="col s12" method="POST">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <textarea id="textarea1" class="materialize-textarea" placeholder="Textarea"></textarea>
+                            </div>
+                          </div>
+                          <input class="waves-effect waves-light btn" value="submit" name="Send">
+                        </form>
+                      </div>`;
+        $('#reviewsession').append(html);
+      })
+    })
 
+  </script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="/scripts/script.js"></script>
