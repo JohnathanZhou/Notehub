@@ -55,9 +55,9 @@ router.use(function(req, res, next){
 //////////////////////////////// PRIVATE ROUTES ////////////////////////////////
 // Only logged in users can see these routes
 
-router.get('/protected', function(req, res, next) {
+router.get('/marketplace', function(req, res, next) {
   res.render('marketplace', {
-    username: req.user.username,
+    product:products
   });
   
 });
