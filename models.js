@@ -36,7 +36,7 @@ var productSchema = mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: 'School'
   },
-  description: Array,
+  description: String
 });
 
 var schoolSchema = mongoose.Schema({
