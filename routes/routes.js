@@ -27,6 +27,8 @@ router.post('/',function(req,res){
   var course = req.body.subject;
   //find all the notes that pretain to the course from the dropdown bar
   Product.find()
+  .populate('owner')
+  .populate('school')
   .exec(function(err,docs){
     console.log(docs);
     res.render('Notehub',{ //renders the search page with all the notes
