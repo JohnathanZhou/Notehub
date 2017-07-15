@@ -59,8 +59,8 @@ router.get('/product/:id', function(req, res) {
 
 
 router.post('/newProduct', function(req, res) {
-  var img = req.file.mimetype.split('image/')
-  var path = req.file.path+'.'+img[1]
+  var img = req.file.mimetype.split('image/');
+  var path = req.file.path.split('public')[1]+'.'+img[1]
   console.log(path)
   var newProduct = new Product({
     name: req.body.name,
