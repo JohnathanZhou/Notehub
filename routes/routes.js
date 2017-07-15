@@ -123,6 +123,7 @@ router.get('/marketplace', function(req, res) {
     })
   });
   router.post('/marketplace', function(req,res){
+    console.log(req.body);
     var find={
       subject: req.body.subject
     };
