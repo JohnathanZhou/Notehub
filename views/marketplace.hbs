@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0048)file:///Users/Peter/Desktop/notesmarketplace.htm -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" type="text/css" href="/marketplace_files/css">
@@ -51,7 +51,7 @@
         <nav>
             <ul id="nav-main" class="nav nav-pills">
                 <li class="has-children ">
-                    <a href="http://localhost:3000/profile"> My profile <i class="fa fa-caret-down"></i></a>
+                    <a href="http://preview.byaviators.com/template/realsite/#"> My profile <i class="fa fa-caret-down"></i></a>
                 </li>
 
             </ul><!-- /.nav -->
@@ -71,57 +71,68 @@
         </div><!-- /.container -->
     </div><!-- /.header-wrapper -->
 </div><!-- /.header-->
-
+    
     <div class="main">
-
+        
         <div class="container">
             <div class="content">
                     <div class="block mb-30 mt-60">
         <div class="hero">
         <div class="container">
-            <div class="row">
+            <div class="row">    
+        <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Category
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>   
                 <div class="dropdown" style="margin-left: 20px">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Price
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Descending</a>
-                    <a class="dropdown-item" href="#">Ascending</a>
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>   
+                <div class="dropdown" style="margin-left: 20px">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Date
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
                   </div>
                 </div>
                 <div class="dropdown" style="margin-left: 20px">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Rating
+                    Major
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">High to low</a>
-                    <a class="dropdown-item" href="#"> Low to high </a>
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
                   </div>
-                </div>
+                </div>       
                 <div class="dropdown" style="margin-left: 20px">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Subject
+                    University
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Computer Engineering</a>
-                    <a class="dropdown-item" href="#">Biology</a>
-                    <a class="dropdown-item" href="#">Maths</a>
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
                   </div>
-                </div>
-                <div class="dropdown" style="margin-left: 20px">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    School
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">UC Berkely</a>
-                    <a class="dropdown-item" href="#">UC San Diego</a>
-                    <a class="dropdown-item" href="#">University of Hong Kong</a>
-                    <a class="dropdown-item" href="#">Northwestern university</a>
-                  </div>
-                </div>
-                <form method="POST" action="">
-                    <button class="btn waves-effect waves-light" type="submit" method="POST" style="margin-left: 10%"  style="color: white"> Submit </button>
-                </form>
+                </div> 
+                    <form method="POST" action="">
+                        <button class="btn waves-effect waves-light" type="submit" method="POST" style="margin-left: 10%"  style="color: white"> Submit </button>  
+                    </form> 
                 </div>
             </div>
         </div>
@@ -129,15 +140,15 @@
             <h1>Meet Realsite</h1>
             <p>Real estate template build upon the <a href="http://preview.byaviators.com/template/realsite/#">material design</a> concepts incorporating all features of modern<br> agency like multiple property displays, administration, submission forms, etc.</p>
         </div>
-        {{#each product}}
+
         <div class="promos">
-            <div class="row">
+                {{#each product}}
                 <div class="col-sm-6 col-md-3 col-lg-3">
                     <div class="promo">
                         <a href="http://preview.byaviators.com/template/realsite/headers-static-image.html">
                             <span class="promo-image">
                                 <span class="promo-image-inner">
-                                    <img src="{{this.school.url}}" alt="">
+                                    <img src="/marketplace_files/realsite-header-image.jpg" alt="">
                                 </span><!-- /.promo-image-inner -->
                             </span><!-- /.promo-image -->
 
@@ -149,15 +160,13 @@
                         </a>
                     </div><!-- /.promo -->
                 </div><!-- /.col-* -->
-            </div><!-- /.row -->
-
+            {{/each}}
         </div><!-- /.promos -->
-    </div><!-- /.block -->
-    {{/each}}
+    </div><!-- /.block --> 
             </div><!-- /.content -->
         </div><!-- /.container -->
 
-
+            
     </div><!-- /.main -->
 
                         <div id="footer" class="footer footer-simple">
@@ -181,7 +190,7 @@
         </div><!-- /.container -->
     </div><!-- /.footer-bottom -->
 </div><!-- /.footer -->
-            </div><!-- /.page-wrapperss-->
+            </div><!-- /.page-wrapper-->
 
 </body>
 
