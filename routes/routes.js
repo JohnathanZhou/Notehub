@@ -47,7 +47,7 @@ router.get('/newProduct', function(req, res) {
   res.render('newProduct')
 })
 
-router.get('/product/:productid', function(req, res) {
+router.get('/product', function(req, res) {
   Product.findById(req.params.productid)
   .exec(
     function(err,doc){
