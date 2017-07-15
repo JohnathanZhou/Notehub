@@ -1,159 +1,171 @@
 <!DOCTYPE html>
 <!-- saved from url=(0063)http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html# -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Userprofile </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Userprofile </title>
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/Userprofile/A.bootstrap.css.pagespeed.cf.laZJ-JbHjf.css">
-  <!--Main styles-->
-  <link rel="stylesheet" type="text/css" href="/Userprofile/A.main.css+adaptive.css+pushy.css+font-awesome.css+animate.css,Mcc.7Xi885fzpN.css.pagespeed.cf.D0GJ6jOiSK.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="/Userprofile/A.bootstrap.css.pagespeed.cf.laZJ-JbHjf.css">
+<!--Main styles-->
+<link rel="stylesheet" type="text/css" href="/Userprofile/A.main.css+adaptive.css+pushy.css+font-awesome.css+animate.css,Mcc.7Xi885fzpN.css.pagespeed.cf.D0GJ6jOiSK.css">
 
-  <link rel="stylesheet" type="text/css" href="/Userprofile/A.settings.css.pagespeed.cf.6k-xcbLfXv.css" media="screen">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+<link rel="stylesheet" type="text/css" href="/Userprofile/A.settings.css.pagespeed.cf.6k-xcbLfXv.css" media="screen">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
 </head>
 <body class="inner_page innerpage">
 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
 
-  <div class="bg_parallax" id="inb" style="background-position: 11.88px -23.85px;">
-    <!--navigation swipe-->
-    <div class="menu-btn">☰</div>
-    <nav class="pushy pushy-left">
-      <div class="profile">
-        <div class="avatar"><span>5</span></div>
-        <h3><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html">Ananew Matvey</a></h3>
-        <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="log_btn">Log in</a>
-      </div>
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()">open</span>
 
-    </nav>
 
-    <!--add-->
-    <div class="add_place none" id="pl">
-      <div class="place_form">
-        <i class="fa fa-times close_window" id="close"></i>
-        <h3>Add new place<span></span></h3>
-        <form>
-          <label>Place name:<input type="text"></label>
-          <label>latitude:<input type="text"></label>
-          <label>longitude:<input type="text"></label>
-          <label>Categori:
-            <select>
-              <option value="Cafe">Cafe</option>
-              <option value="Bar">Bar</option>
-              <option value="Cinema">Cinema</option>
-              <option value="Shop">Shop</option>
-              <option value="Club">Club</option>
-              <option value="Bank">Bank</option>
-            </select>
-          </label>
-          <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="green_btn_header" id="add">Add</a>
-        </form>
-      </div>
+<div class="bg_parallax" id="inb" style="background-position: 11.88px -23.85px;">
+      <!--navigation swipe-->
+  <div class="menu-btn">☰</div>
+  <nav class="pushy pushy-left">
+    <div class="profile">
+      <div class="avatar"><span>5</span></div>
+      <h3><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html">Ananew Matvey</a></h3>
+      <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="log_btn">Log in</a>
     </div>
 
-    <!--autorization-->
-    <div class="add_place none" id="autorized">
-      <div class="place_form login_form">
-        <i class="fa fa-times close_window" id="closeau"></i>
-        <h3>Autorization<span></span></h3>
-        <form>
-          <label>Login:<input type="text"></label>
-          <label>Password:<input type="text"></label>
-          <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="btn btn-success">Log in</a>
-          <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="btn btn-primary"><i class="icon-facebook"></i>Log in with Facebook</a>
-        </form>
-      </div>
+  </nav>
+
+  <!--add-->
+  <div class="add_place none" id="pl">
+    <div class="place_form">
+      <i class="fa fa-times close_window" id="close"></i>
+      <h3>Add new place<span></span></h3>
+      <form>
+        <label>Place name:<input type="text"></label>
+        <label>latitude:<input type="text"></label>
+        <label>longitude:<input type="text"></label>
+        <label>Categori:
+          <select>
+            <option value="Cafe">Cafe</option>
+            <option value="Bar">Bar</option>
+            <option value="Cinema">Cinema</option>
+            <option value="Shop">Shop</option>
+            <option value="Club">Club</option>
+            <option value="Bank">Bank</option>
+          </select>
+        </label>
+        <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="green_btn_header" id="add">Add</a>
+      </form>
     </div>
-    <div class="site-overlay"></div>
-    <div id="container">
-      <!--header-->
-      <div class="container-fluid header inner_head">
-        <div class="fixed_w">
-          <div class="row">
-            <div class="col-md-12">
-              <input type="text" class="search" placeholder="search"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="green_btn_header" id="ad">Add note!</a></div>
-            </div>
+  </div>
+
+  <!--autorization-->
+  <div class="add_place none" id="autorized">
+    <div class="place_form login_form">
+      <i class="fa fa-times close_window" id="closeau"></i>
+      <h3>Autorization<span></span></h3>
+      <form>
+        <label>Login:<input type="text"></label>
+        <label>Password:<input type="text"></label>
+        <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="btn btn-success">Log in</a>
+        <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="btn btn-primary"><i class="icon-facebook"></i>Log in with Facebook</a>
+      </form>
+    </div>
+  </div>
+  <div class="site-overlay"></div>
+  <div id="container">
+    <!--header-->
+    <div class="container-fluid header inner_head">
+      <div class="fixed_w">
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" class="search" placeholder="search"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="green_btn_header" id="ad">Add note!</a></div>
           </div>
         </div>
-        <div class="container page_info">
-          <div class="col_md_12">
-            <img src="data:image/webp;base64,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" alt="" data-pagespeed-url-hash="861472753" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-            <h1>Matvey Ananew</h1>
-            <span class="status">Traveller</span>
-          </div>
+      </div>
+      <div class="container page_info">
+        <div class="col_md_12">
+          <img src="data:image/webp;base64,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" alt="" data-pagespeed-url-hash="861472753" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          <h1>Matvey Ananew</h1>
+          <span class="status">Traveller</span>
         </div>
-        <div class="container contant">
-          <div class="row cont">
+      </div>
+      <div class="container contant">
+        <div class="row cont">
 
-            <!-- Left column-->
+          <!-- Left column-->
 
-            <!--content-->
-            <div class="col-md-9 basic vp">
+          <!--content-->
+          <div class="col-md-9 basic vp">
 
-              <!--visited places-->
+            <!--visited places-->
 
-              <!--reviews-->
-              <div class="reviews">
-                <h4>3 Reviews:</h4>
+            <!--reviews-->
+            <div class="reviews">
+              <h4>3 Reviews:</h4>
 
-                <!--review-->
-                <div class="rev">
-                  <div class"user"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html" class"user_avatars">
-                    <img src="data:image/webp;base64,UklGRrYDAABXRUJQVlA4IKoDAAAQFACdASqAAIAAPm02mEikIyKhJBgIuIANiWVu3TJK8HGXL6u3GbXNpzvs32X+atfX/GezHsZ2qd3a4z6I0wK83/zvlJeANHx6Cv0B6OfpD/oerGJcExth7ZeU2dUOkTzCHt8mYZOYuU3NWHmxTsmjA9HmS1Cwhbl+nz9myWA43GjlZaPgGaCxsg+7UAusE0Uzljb2/cKZYG7Sty6LtMboQ6RP9BMbYe04AP75vo///EOf1t/3KRkf/oV6y++a6AALYxgCoUojQ4tfwLTHbiZ+T+2GwxCum6T3dfVeFngToyLRqy21YPZjZOcrxII8ap5j235vloon6NMPpjCzv83tN7b4JOQVw2EMiuue21Ya4mRWcznN77VJ0KwipHOEKTDhjvrPBPmhqBCzxaSbYyOP54oPbVFX/+Sx+Z4vsJUEkGhn6Ua+gIluY4k5gC1kOElmU4HaUfPuMfUmKM2Fd6tBLvv/isrjDE7FP7GeLqc8f1c0NckRH2IBo/4z8HJqzoV23ah9o6/lW3z/1fbrdyJ1GO5/EchNd6ohlhtv6styiXWJdYjPdARuzOQ7hQ2d0vrJHhzduBG8/uR1sr35oxFeGZiH8AxJxwu9yVN5SIOHN7W1uBq9274J987tOGCCOeFkpsp4ULYyuZ4N3h4Rpk3lAqF+D8vf/10RlIQc4dLhsepCnvZ07Qu1h/BJKsu8u16sgoWNSQq461xVT/dDEuJXvpAK9ShR8icCtB2hkbSCf3xV+lHzaJTqQhVaw0nq7oGFeXTLRKgRbi11EaSdnRV1AEQBWqgRn3D9VXmZF6669dVKEL5WX5G5YB3ZwpBOhcdwJupJOchgWeOulsxUPF7tPPv8+pzCY7Z9UU+3EW5HkLtxErGAf+ntfJNbl4z4zEhqGnD5lnrspL0ywFLRmAgT5r9toO5JWzx/ZD1P0uD2VAlpLyBGbjt/Gs8Gj09GXkXKFIVB/JOtOA1UJ/55OhGXFg+6Y4XvZQm7cOD5Q6g/gb94Jl+GX+xxqwHH9d6K/iBwUni5+pcrhCOp08KmknvmZ9PrSIeqjczAMGUREHcyre6pp6OUsNcKp0xNqaj/KXiLJqLYP1DDcf4fIkEl1eJO0mF3qCVbaSWAkWYOF9ELRHbRbaIGRfcnUqe3D8Th9C+uoVzi+Trfwn2ehTEYGGRcymTqKo2h9Vxd7kGzf44L5RtRKkBLHYVZ5jqgPZbp9xhFlHuKQByp6K/kM1Nou00He0GKkTAAAAAAAA==" alt="" data-pagespeed-url-hash="2157941605" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                  </a></div>
+              <!--review-->
+              <div class="rev">
+                <div class"user"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html" class"user_avatars">
+                  <img src="data:image/webp;base64,UklGRrYDAABXRUJQVlA4IKoDAAAQFACdASqAAIAAPm02mEikIyKhJBgIuIANiWVu3TJK8HGXL6u3GbXNpzvs32X+atfX/GezHsZ2qd3a4z6I0wK83/zvlJeANHx6Cv0B6OfpD/oerGJcExth7ZeU2dUOkTzCHt8mYZOYuU3NWHmxTsmjA9HmS1Cwhbl+nz9myWA43GjlZaPgGaCxsg+7UAusE0Uzljb2/cKZYG7Sty6LtMboQ6RP9BMbYe04AP75vo///EOf1t/3KRkf/oV6y++a6AALYxgCoUojQ4tfwLTHbiZ+T+2GwxCum6T3dfVeFngToyLRqy21YPZjZOcrxII8ap5j235vloon6NMPpjCzv83tN7b4JOQVw2EMiuue21Ya4mRWcznN77VJ0KwipHOEKTDhjvrPBPmhqBCzxaSbYyOP54oPbVFX/+Sx+Z4vsJUEkGhn6Ua+gIluY4k5gC1kOElmU4HaUfPuMfUmKM2Fd6tBLvv/isrjDE7FP7GeLqc8f1c0NckRH2IBo/4z8HJqzoV23ah9o6/lW3z/1fbrdyJ1GO5/EchNd6ohlhtv6styiXWJdYjPdARuzOQ7hQ2d0vrJHhzduBG8/uR1sr35oxFeGZiH8AxJxwu9yVN5SIOHN7W1uBq9274J987tOGCCOeFkpsp4ULYyuZ4N3h4Rpk3lAqF+D8vf/10RlIQc4dLhsepCnvZ07Qu1h/BJKsu8u16sgoWNSQq461xVT/dDEuJXvpAK9ShR8icCtB2hkbSCf3xV+lHzaJTqQhVaw0nq7oGFeXTLRKgRbi11EaSdnRV1AEQBWqgRn3D9VXmZF6669dVKEL5WX5G5YB3ZwpBOhcdwJupJOchgWeOulsxUPF7tPPv8+pzCY7Z9UU+3EW5HkLtxErGAf+ntfJNbl4z4zEhqGnD5lnrspL0ywFLRmAgT5r9toO5JWzx/ZD1P0uD2VAlpLyBGbjt/Gs8Gj09GXkXKFIVB/JOtOA1UJ/55OhGXFg+6Y4XvZQm7cOD5Q6g/gb94Jl+GX+xxqwHH9d6K/iBwUni5+pcrhCOp08KmknvmZ9PrSIeqjczAMGUREHcyre6pp6OUsNcKp0xNqaj/KXiLJqLYP1DDcf4fIkEl1eJO0mF3qCVbaSWAkWYOF9ELRHbRbaIGRfcnUqe3D8Th9C+uoVzi+Trfwn2ehTEYGGRcymTqKo2h9Vxd7kGzf44L5RtRKkBLHYVZ5jqgPZbp9xhFlHuKQByp6K/kM1Nou00He0GKkTAAAAAAAA==" alt="" data-pagespeed-url-hash="2157941605" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </a></div>
+                <div class="texts">
+                  <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Oki doki</a> <span>12.09.2008</span></div>
+                  <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! Kids will love it...</div>
+                </div>
+              </div>
+              <!--review end-->
+
+              <!--review-->
+              <div class="rev">
+                <div class"user"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html" class"user_avatars">
+                  <img src="data:image/webp;base64,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" alt="" data-pagespeed-url-hash="1744972516" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></div>
                   <div class="texts">
-                    <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Oki doki</a> <span>12.09.2008</span></div>
-                    <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! Kids will love it...</div>
+                    <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Old capitan pub</a> <span>12.09.2008</span></div>
+                    <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! </div>
                   </div>
                 </div>
                 <!--review end-->
 
+
                 <!--review-->
                 <div class="rev">
                   <div class"user"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html" class"user_avatars">
-                    <img src="data:image/webp;base64,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" alt="" data-pagespeed-url-hash="1744972516" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></div>
+                    <img src="data:image/webp;base64,UklGRrADAABXRUJQVlA4IKQDAADwFwCdASqAAIAAPm0yk0ckIyGhLBVZaIANiWIA10+z++/lN7L1g/tn4W5HU4vafOG8wD9WPMA9TfmA/Zn9qvej9K/+S9R/pKvQA6YP9rvSx1VDyc+rFuCRURPzTxSKvgHbXggvhfnr3Otji0f3vg+D72tPFQETB1kZw5pvEE4daHqqQwxrzja/pJhvnhbyXIpLWoC/FhOZOOV147AH/TXQeewvrex9KOOnC2S0Yqvs1k1CtEYlMqRUbqgblJANGTPXIFdslSsygAD+/PQABPWO2n9if7RlNvsPs/7SLmGqG1kFfebscswcVA7X6JbSpHXYQMFm4iwAh59WrMPEUMHrsaK0GxCHBfXTfbfqXEafU++7kcKlYPUMYtMv4o7If6H5oRCIgAOaDkZeuvODtUUEWA5HDgkQAohboxErrIVEGGE3ynIMXNkxPnR/fDqsm5nmQnVkmgvP+XFousKfZEKDNvmDYOuIQhdfqdjizO3uVXtOBOTGOFTr5bfPtSDPLm4dBVuifHCugHkoOnrniU6+fTrE9fjS/MS9HvBe/gdMOwJCaNoY3lo+t85elfyAz+aHcPc3y83MDgMhiQBP9VpyZMOibyvfgyFR4JZkaQiElCqNqqXiKWervZZnB7BN8CJ9AU9D23/fd9h+s/wyHBFm4+6rXU07LIJliW3izU1tqvhhmTWRqZoOtxuvVWTMDrxHa2R7s8wbqI4uvadZSdhNSFgGsOoiG6vmOFRjQdKjTFbnVHI/hJVVVAH1KXRs/jSPUDRLufFWVM+mT+5W/NGUTisdA31rhaTfOzHK9xnV0ebyqVjaEtRpuZahvRm4AYOsXeXz6fhAoiyJhaXRPFouWdbTyyqwgKMnC26QQcDnucrn2Zxf1aXZH0aYQWK+q0OOX5CYZGMjl64c4tS46QXyyTE5AUkpv8VHZgZbNJhC1z+g+sSyWop+mSuaVt/FH3xjjnkijJ2bexdHhSQjWB/eIg2vDQ8zfvf9cN0YYjMEsPrgen19S2b0tVyZzO22u9syQx9F1xfZghtkxkRqj06eMnY3chE2ECArp7SYd9DYUmRCNdD4F88eshcsVZXt9EDQjA8PwKC/ABK+o3v3NtiS4dTkdimJJX/oz7GLGvC55CwqTr1xXYbhH/u4p5davuglvzQbvrkMH39D7XEmkavqFHU2CYgXsbvPBydnhSCWq1ardNtmYqkB27R6wEuoIoVcFM4O3lqDTjL6FIlWmkAAAAAAAA==" alt="" data-pagespeed-url-hash="1863441684" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></div>
                     <div class="texts">
-                      <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Old capitan pub</a> <span>12.09.2008</span></div>
-                      <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! </div>
+                      <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Royal burger</a> <span>12.09.2008</span></div>
+                      <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! Kids will love it...</div>
                     </div>
                   </div>
                   <!--review end-->
-
-
-                  <!--review-->
-                  <div class="rev">
-                    <div class"user"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html" class"user_avatars">
-                      <img src="data:image/webp;base64,UklGRrADAABXRUJQVlA4IKQDAADwFwCdASqAAIAAPm0yk0ckIyGhLBVZaIANiWIA10+z++/lN7L1g/tn4W5HU4vafOG8wD9WPMA9TfmA/Zn9qvej9K/+S9R/pKvQA6YP9rvSx1VDyc+rFuCRURPzTxSKvgHbXggvhfnr3Otji0f3vg+D72tPFQETB1kZw5pvEE4daHqqQwxrzja/pJhvnhbyXIpLWoC/FhOZOOV147AH/TXQeewvrex9KOOnC2S0Yqvs1k1CtEYlMqRUbqgblJANGTPXIFdslSsygAD+/PQABPWO2n9if7RlNvsPs/7SLmGqG1kFfebscswcVA7X6JbSpHXYQMFm4iwAh59WrMPEUMHrsaK0GxCHBfXTfbfqXEafU++7kcKlYPUMYtMv4o7If6H5oRCIgAOaDkZeuvODtUUEWA5HDgkQAohboxErrIVEGGE3ynIMXNkxPnR/fDqsm5nmQnVkmgvP+XFousKfZEKDNvmDYOuIQhdfqdjizO3uVXtOBOTGOFTr5bfPtSDPLm4dBVuifHCugHkoOnrniU6+fTrE9fjS/MS9HvBe/gdMOwJCaNoY3lo+t85elfyAz+aHcPc3y83MDgMhiQBP9VpyZMOibyvfgyFR4JZkaQiElCqNqqXiKWervZZnB7BN8CJ9AU9D23/fd9h+s/wyHBFm4+6rXU07LIJliW3izU1tqvhhmTWRqZoOtxuvVWTMDrxHa2R7s8wbqI4uvadZSdhNSFgGsOoiG6vmOFRjQdKjTFbnVHI/hJVVVAH1KXRs/jSPUDRLufFWVM+mT+5W/NGUTisdA31rhaTfOzHK9xnV0ebyqVjaEtRpuZahvRm4AYOsXeXz6fhAoiyJhaXRPFouWdbTyyqwgKMnC26QQcDnucrn2Zxf1aXZH0aYQWK+q0OOX5CYZGMjl64c4tS46QXyyTE5AUkpv8VHZgZbNJhC1z+g+sSyWop+mSuaVt/FH3xjjnkijJ2bexdHhSQjWB/eIg2vDQ8zfvf9cN0YYjMEsPrgen19S2b0tVyZzO22u9syQx9F1xfZghtkxkRqj06eMnY3chE2ECArp7SYd9DYUmRCNdD4F88eshcsVZXt9EDQjA8PwKC/ABK+o3v3NtiS4dTkdimJJX/oz7GLGvC55CwqTr1xXYbhH/u4p5davuglvzQbvrkMH39D7XEmkavqFHU2CYgXsbvPBydnhSCWq1ardNtmYqkB27R6wEuoIoVcFM4O3lqDTjL6FIlWmkAAAAAAAA==" alt="" data-pagespeed-url-hash="1863441684" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></div>
-                      <div class="texts">
-                        <div class="head_rev"><a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/02.html">Royal burger</a> <span>12.09.2008</span></div>
-                        <div class="text_rev">Get a history lesson on possibly the world's most famous beverage -- and sample Coca-Cola products from around the globe! Kids will love it...</div>
-                      </div>
-                    </div>
-                    <!--review end-->
-                  </div>
-
-                  <!--morebtn-->
-                  <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="more_btn">Load more</a>
                 </div>
+
+                <!--morebtn-->
+                <a href="http://matveyan.ru/Themes/mycity/02.Default_Light/html/03.html#" class="more_btn">Load more</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!--
-        #################################
-        - SCRIPT FILES -
-        #################################
-      -->
-      <!--Google maps API linl-->
+      <!--
+      #################################
+      - SCRIPT FILES -
+      #################################
+    -->
+    <!--Google maps API linl-->
 
 
-      <!--Parallax bg-->
+    <!--Parallax bg-->
 
-    </body></html>
+  </body></html>

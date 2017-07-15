@@ -35,7 +35,7 @@ router.post('/',function(req,res){
   })
 })
 
-router.get('/profile', function(req, res) {
+router.get('/profile/:userid', function(req, res) {
   res.render('userprofile')
 })
 
@@ -43,8 +43,20 @@ router.get('/newProduct', function(req, res) {
   res.render('newProduct')
 })
 
+router.get('/product/:id', function(req, res) {
+  Product.findById(req.params.productid)
+  .exec(
+    function(err,doc){
+      res.render('singleproduct',{
+        product:doc
+      })
+      //res.json(doc)
+    }
+  )
+})
 
-router.post('/newProduct', upload.single('productImage'), function(req, res, next) {
+
+// router.post('/newProduct', upload.single('productImage'), function(req, res, next) {
   // console.log(req.body);
   // console.log(req.files)
   // res.render('home')
@@ -65,10 +77,39 @@ router.post('/newProduct', upload.single('productImage'), function(req, res, nex
 //     res.redirect("/home");
 //   });
 // });
-  console.log(req.file);
-  res.send(200)
-
+//   console.log(req.file);
+//   res.send(200)
+// })
+router.post('/newProduct', function(req, res) {
+  var newProduct = new Product({
+    name: req.body.name,
+    pdf: 'http://www.nhptv.org/wild/images/moosenpsJacobWFrank.jpg',
+    owner: req.user._id,
+    price: req.body.price,
+    course: req.body.course,
+    subject: req.body.subject,
+    school: req.user.school,
+    description: req.body.description
+  })
+  newProduct.save(function(err) {
+    if (err) {
+      console.log("product not saved");
+    }
+    else {
+      console.log('Product saved!');
+      Product.findOne({name: req.body.name, description: req.body.description}, function(err, product) {
+        if (err) {
+          console.log('error in finding saved product');
+        }
+        else {
+          res.redirect('/product/'+product._id)
+        }
+      })
+    }
+  })
 })
+
+
 
 
 ///////////////////////////// END OF PUBLIC ROUTES /////////////////////////////
@@ -96,33 +137,64 @@ router.get('/marketplace', function(req, res) {
       })
     })
   });
-router.post('/marketplace', function(req,res){
-  var find={
-    subject: req.body.subject
-  };
-  var sort = {}
-  if(req.body.sort = 'Rating'){
-    sort = {
-      //owner.sellerrating: 1
+  router.post('/marketplace', function(req,res){
+    var find={
+      subject: req.body.subject
+    };
+    if('all'!==req.body.school){
+      find.school=req.body.school;
     }
-  }else if(req.body.sort = 'Price Ascending'){
-    sort = {
-      price: -1
+    var sort = {}
+    if(req.body.sort = 'Rating'){
+      Product.find(find)
+      .populate('school')
+      .populate('owner')
+      .sort(find)
+      .exec(
+        function(err,doc){
+          doc=doc.sort(function(a,b){
+            a.owner.sellerrating-b.owner.sellerrating
+          })
+          res.render('marketplace',{
+            product:doc
+          })
+        }
+      )
+    }else if(req.body.sort = 'Price Ascending'){
+      sort = {
+        price: -1
+      }
+      Product.find(find)
+      .populate('school')
+      .populate('owner')
+      .sort(find)
+      .sort(sort)
+      .exec(
+        function(err,doc){
+          res.render('marketplace',{
+            product:doc
+          })
+        }
+      )
+    }else{
+      sort = {
+        price: 1
+      }
+      Product.find(find)
+      .populate('school')
+      .populate('owner')
+      .sort(find)
+      .sort(sort)
+      .exec(
+        function(err,doc){
+          res.render('marketplace',{
+            product:doc
+          })
+        }
+      )
     }
-  }else{
-    sort = {
-      price: 1
-    }
-  }
+  })
 
-  if('all'!==req.body.school){
-    find.school=req.body.school;
-  }
-  Product.find(find)
-  .populate('school')
-  .populate('owner')
-  .sort(find)
-})
 
   ///////////////////////////// END OF PRIVATE ROUTES /////////////////////////////
 
