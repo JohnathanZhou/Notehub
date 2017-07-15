@@ -51,15 +51,16 @@ router.get('/product/:productid', function(req, res) {
   Product.findById(req.params.productid)
   .exec(
     function(err,doc){
-      res.render('singleproduct',{
-        product:doc
-      })
+      // res.render('singleproduct',{
+      //   product:doc
+      // })
+      res.json(doc)
     }
   )
 })
 
 
-router.post('/newProduct', upload.single('productImage'), function(req, res, next) {
+// router.post('/newProduct', upload.single('productImage'), function(req, res, next) {
   // console.log(req.body);
   // console.log(req.files)
   // res.render('home')
@@ -80,10 +81,39 @@ router.post('/newProduct', upload.single('productImage'), function(req, res, nex
 //     res.redirect("/home");
 //   });
 // });
-  console.log(req.file);
-  res.send(200)
-
+//   console.log(req.file);
+//   res.send(200)
+// })
+router.post('/newProduct', function(req, res) {
+  var newProduct = new Product({
+    name: req.body.name,
+    pdf: 'http://www.nhptv.org/wild/images/moosenpsJacobWFrank.jpg',
+    owner: req.user._id,
+    price: req.body.price,
+    course: req.body.course,
+    subject: req.body.subject,
+    school: req.user.school,
+    description: req.body.description
+  })
+  newProduct.save(function(err) {
+    if (err) {
+      console.log("product not saved");
+    }
+    else {
+      console.log('Product saved!');
+      Product.findOne({name: req.body.name, description: req.body.description}, function(err, product) {
+        if (err) {
+          console.log('error in finding saved product');
+        }
+        else {
+          res.redirect('/product/'+product._id)
+        }
+      })
+    }
+  })
 })
+
+
 
 
 ///////////////////////////// END OF PUBLIC ROUTES /////////////////////////////
