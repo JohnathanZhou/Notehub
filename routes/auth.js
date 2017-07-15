@@ -21,8 +21,8 @@ module.exports = function(passport) {
       username: req.body.username,
       password: req.body.password,
       email: req.body.email,
-      major: req.body.major,
-      school: req.body.school
+      major: req.body.major_select,
+      school: req.body.university_select
     });
     u.save(function(err, user) {
       if (err) {
@@ -42,7 +42,7 @@ module.exports = function(passport) {
 
   // POST Login page
   router.post('/login', passport.authenticate('local',{
-    successRedirect: '/protected',
+    successRedirect: '/marketplace',
     failureRedirect: '/login'
   }));
 
